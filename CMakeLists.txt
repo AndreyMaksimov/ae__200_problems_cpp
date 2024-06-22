@@ -3,4 +3,10 @@ project(ae)
 
 set(CMAKE_CXX_STANDARD 23)
 
-add_executable(ae.exe main.cpp)
+set(AlgoExpertDir AlgoExpert)
+add_subdirectory(${AlgoExpertDir})
+
+set(aeExe ae.exe)
+add_executable(${aeExe} main.cpp)
+target_include_directories(${aeExe} PRIVATE ${AlgoExpertDir})
+target_link_libraries(${aeExe} PRIVATE algoExpert)

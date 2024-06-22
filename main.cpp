@@ -1,6 +1,7 @@
 #include <iostream>
+#include "AlgoExpert.h"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    algoExpert::algoExpertSamples();
     return 0;
 }
