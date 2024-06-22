@@ -1,10 +1,10 @@
 // https://www.algoexpert.io/questions/validate-subsequence
 #include <vector>
 
-namespace tasks {
+namespace algoExpert::arrays {
     using std::vector;
 
-    auto isValidSubsequence(vector<int> array, vector<int> sequence) {
+    bool isValidSubsequence(vector<int> array, vector<int> sequence) {
         auto result = false;
         auto iter_a = array.begin();
         auto iter_s = sequence.begin();

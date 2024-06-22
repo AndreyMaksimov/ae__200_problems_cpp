@@ -1,5 +1,6 @@
-//
-// Created by am on 6/22/24.
-//
-
 #pragma once
+#include <vector>
+
+namespace algoExpert::arrays {
+    bool isValidSubsequence(std::vector<int> array, std::vector<int> sequence);
+}
