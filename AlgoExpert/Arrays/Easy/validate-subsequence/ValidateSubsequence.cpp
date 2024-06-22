@@ -4,7 +4,7 @@
 namespace algoExpert::arrays {
     using std::vector;
 
-    bool isValidSubsequence(vector<int> array, vector<int> sequence) {
+    bool isValidSubsequence01(vector<int>& array, vector<int>& sequence) {
         auto result = false;
         auto iter_a = array.begin();
         auto iter_s = sequence.begin();
@@ -17,5 +17,9 @@ namespace algoExpert::arrays {
             ++iter_a;
         }
         return result;
+    }
+
+    bool isValidSubsequence(vector<int> array, vector<int> sequence) {
+        return isValidSubsequence01(array, sequence);
     }
 }
