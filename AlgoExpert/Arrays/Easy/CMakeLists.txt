@@ -2,3 +2,4 @@
 
 add_subdirectory(validate-subsequence)
 add_subdirectory(two-number-sum)
+add_subdirectory(sorted-squared-array)

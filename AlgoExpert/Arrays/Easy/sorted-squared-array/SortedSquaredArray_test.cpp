@@ -1,0 +1,5 @@
+#include "SortedSquaredArray.h"
+
+namespace {
+
+}
