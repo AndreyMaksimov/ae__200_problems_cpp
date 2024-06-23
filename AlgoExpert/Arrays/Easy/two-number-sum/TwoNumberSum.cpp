@@ -6,6 +6,7 @@
 // #std::count
 
 #include <vector>
+#include <unordered_set>
 #include "TwoNumberSum.h"
 
 namespace algoExpert::arrays {
@@ -28,7 +29,22 @@ namespace algoExpert::arrays {
         return {};
     }
 
+    vector<int> twoNumberSum_n1(const vector<int>& array, const int targetSum) {
+        std::unordered_set<int> hash;
+        for (const auto i: array) {
+            if ( (i+i) == targetSum) continue; // skip same value
+            hash.insert(i);
+        }
+        for (const auto i: array) {
+            const auto di = targetSum - i;
+            if (hash.find(di) == hash.end()) continue;
+            return {i, di};
+        }
+        return {};
+    }
+
     vector<int> twoNumberSum(vector<int> array, int targetSum) {
-        return twoNumberSum_n2(array, targetSum);
+        // return twoNumberSum_n2(array, targetSum);
+        return twoNumberSum_n1(array, targetSum);
     }
 }
