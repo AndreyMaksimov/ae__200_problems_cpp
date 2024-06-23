@@ -1,4 +1,3 @@
-
 #include "ValidateSubsequence.h"
 #include "gtest/gtest.h"
 

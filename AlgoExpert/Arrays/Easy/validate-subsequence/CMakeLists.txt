@@ -12,8 +12,10 @@ target_sources(${problem_test_exe} PUBLIC
 )
 
 target_include_directories(${problem_test_exe} PUBLIC
-        ${googletest_SOURCE_DIR}/googletest/include
+        ${googletest_include}
 )
 target_link_libraries(${problem_test_exe} PUBLIC
         gtest_main
 )
+
+gtest_discover_tests(${problem_test_exe})

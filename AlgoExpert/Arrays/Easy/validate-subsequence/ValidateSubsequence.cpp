@@ -1,4 +1,6 @@
 // https://www.algoexpert.io/questions/validate-subsequence
+// #std::vector #iterator
+
 #include <vector>
 
 namespace algoExpert::arrays {
