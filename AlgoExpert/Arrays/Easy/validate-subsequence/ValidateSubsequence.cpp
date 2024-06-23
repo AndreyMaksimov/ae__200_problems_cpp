@@ -1,5 +1,9 @@
 // https://www.algoexpert.io/questions/validate-subsequence
-// #std::vector #iterator
+//
+// #arrays
+// #easy
+// #std::vector
+// #iterator
 
 #include <vector>
 
