@@ -13,6 +13,9 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(googletest)
 set(googletest_include ${googletest_SOURCE_DIR}/googletest/include)
 
+set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake/")
+include(AeHelpers)
+
 enable_testing()
 include(GoogleTest)
 
