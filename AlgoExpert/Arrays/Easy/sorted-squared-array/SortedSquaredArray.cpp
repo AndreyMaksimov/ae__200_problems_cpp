@@ -1,15 +1,27 @@
 // https://www.algoexpert.io/questions/sorted-squared-array
+//
+// #arrays
+// #easy
+// #std::vector
+// #std::reverse_iterator
 
 
 #include "SortedSquaredArray.h"
 
 namespace algoExpert::arrays {
+
+    //
+    // 1) Find the point where '-' switches to '+'
+    // 2) Apply iterators:
+    //   2.1) forward for '+' part
+    //   2.1) reverse for '-' part
+    //
     std::vector<int> sortedSquaredArray(std::vector<int> array) {
         const auto size = array.size();
         std::vector<int> array_result(size);
         auto pos_result = array_result.begin();
 
-        auto i0 = 0;
+        auto i0 = 0;  // Find the point where '-' switches to '+'
         while (array[i0] < 0) {
             i0++;
         }
