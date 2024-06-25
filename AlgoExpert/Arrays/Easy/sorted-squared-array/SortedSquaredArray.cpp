@@ -4,21 +4,23 @@
 // #easy
 // #std::vector
 // #std::reverse_iterator
+// #std::remove_reference
 
-
+#include <type_traits>
+#include <cstdlib>
 #include "SortedSquaredArray.h"
 
 namespace algoExpert::arrays {
 
-    //
+    // My first guess/idea
     // 1) Find the point where '-' switches to '+'
     // 2) Apply iterators:
-    //   2.1) forward for '+' part
     //   2.1) reverse for '-' part
+    //   2.2) forward for '+' part
     //
-    std::vector<int> sortedSquaredArray(std::vector<int> array) {
+    std::vector<int> sortedSquaredArray_my(std::vector<int>& array) {
         const auto size = array.size();
-        std::vector<int> array_result(size);
+        std::remove_reference<decltype(array)>::type array_result(size);
         auto pos_result = array_result.begin();
 
         auto i0 = 0;  // Find the point where '-' switches to '+'
@@ -53,4 +55,38 @@ namespace algoExpert::arrays {
         }
         return array_result;
     }
+
+    // Most nice solution
+    // Implementation according to Hint 4
+    // #shared on https://www.algoexpert.io/questions/sorted-squared-array
+    std::vector<int> sortedSquaredArray_hint4(std::vector<int>& array) {
+        const auto size = array.size();
+        std::remove_reference<decltype(array)>::type array_result(size);
+
+        auto iter_forward = array.begin();
+        auto iter_reverse = array.rbegin();
+        auto iter_result = array_result.rbegin();
+
+        while (iter_result != array_result.rend()) {
+            const auto af_abs = std::abs(*iter_forward);
+            const auto ar_abs = std::abs(*iter_reverse);
+            std::remove_const<decltype(af_abs)>::type a;
+            if (af_abs > ar_abs) {
+                a = af_abs;
+                ++iter_forward;
+            }
+            else {
+                a = ar_abs;
+                ++iter_reverse;
+            }
+            *iter_result++ = a*a;
+        }
+        return array_result;
+    }
+
+    std::vector<int> sortedSquaredArray(std::vector<int> array) {
+//        return sortedSquaredArray_my(array);
+        return sortedSquaredArray_hint4(array);
+    }
+
 };
