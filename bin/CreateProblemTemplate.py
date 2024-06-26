@@ -10,7 +10,7 @@ PROBLEM_NAME = 'three-number-sum'
 CMAKE_LISTS = 'CMakeLists.txt'
 
 project_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-problem_url = ALGOEXPERT_QUESTIONS_URL + '/' + PROBLEM_NAME
+problem_url = ALGOEXPERT_QUESTIONS_URL + PROBLEM_NAME
 
 
 def create_module_name(problem_name: str) -> str:
