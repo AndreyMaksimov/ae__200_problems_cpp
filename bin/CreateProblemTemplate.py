@@ -33,28 +33,67 @@ def create_module_name(problem_name: str) -> str:
     return mn_result
 
 
-def create_h_file(path, name):
-    # TODO
-    pass
+def uncapitalize_first(word: str):
+    return word[:1].lower() + word[1:]
 
 
-def create_cpp_file(path, name):
-    # TODO
-    pass
+problem_namespace = f'algoExpert::{uncapitalize_first(CATEGORY)}'
 
 
-def create_test_file(path, name):
-    # TODO
-    pass
+def create_h_file(path, name, overwrite=True):
+    file_path = os.path.join(path, f'{name}.h')
+    if os.path.exists(file_path):
+        print(f'create_h_file warning: "{file_path}" already exists')
+        if not overwrite:
+            print(f'create_h_file warning: nothing to do')
+            return
+    with open(file_path, mode='w') as f:
+        print('#pragma once', file=f)
+        print(file=f)
+        print(f'namespace {problem_namespace} {{', file=f)
+        print('}', file=f)
 
 
-def create_cmake_file(abspath, path, name):
+def create_cpp_file(path, name, overwrite=True):
+    file_path = os.path.join(path, f'{name}.cpp')
+    if os.path.exists(file_path):
+        print(f'create_cpp_file warning: "{file_path}" already exists')
+        if not overwrite:
+            print(f'create_cpp_file warning: nothing to do')
+            return
+    with open(file_path, mode='w') as f:
+        print(f'#include "{name}.h"', file=f)
+        print(file=f)
+        print(f'namespace {problem_namespace} {{', file=f)
+        print('}', file=f)
+
+
+def create_test_file(path, name, overwrite=True):
+    file_path = os.path.join(path, f'{name}_test.cpp')
+    if os.path.exists(file_path):
+        print(f'create_test_file warning: "{file_path}" already exists')
+        if not overwrite:
+            print(f'create_test_file warning: nothing to do')
+            return
+    with open(file_path, mode='w') as f:
+        print(f'#include "{name}.h"', file=f)
+        print('#include "gtest/gtest.h"', file=f)
+        print(file=f)
+        print('namespace {', file=f)
+        print('}', file=f)
+
+
+def create_cmake_file(abspath, path, name, overwrite=True):
     cmake_path = os.path.join(abspath, CMAKE_LISTS)
+    if os.path.exists(cmake_path):
+        print(f'create_cmake_file warning: "{cmake_path}" already exists')
+        if not overwrite:
+            print(f'create_cmake_file warning: nothing to do')
+            return
     with open(cmake_path, mode='w') as f:
         print(f'# {path}/{CMAKE_LISTS}', file=f)
         print(file=f)
         print(f'add_tests_for_problem({name})', file=f)
-    pass
 
 
 def update_group_cmake_file(group_path, name):
@@ -65,7 +104,7 @@ def update_group_cmake_file(group_path, name):
     with open(cmake_path, mode='r') as f:
         for line in f:
             if line_to_append in line:
-                print(f'warning: "{line_to_append}" already exists in {cmake_path}')
+                print(f'update_group_cmake_file warning: "{line_to_append}" already exists in {cmake_path} nothing todo')
                 return
     with open(cmake_path, mode='a') as f:
         print(f'{line_to_append}', file=f)
@@ -81,5 +120,10 @@ os.makedirs(problem_dir_abspath, exist_ok=True)
 problem_module_name = create_module_name(PROBLEM_NAME)
 print(problem_module_name)
 
+to_overwrite = False
+
 update_group_cmake_file(problems_group_abspath, PROBLEM_NAME)
-create_cmake_file(problem_dir_abspath, problem_dir_path, problem_module_name)
+create_cmake_file(problem_dir_abspath, problem_dir_path, problem_module_name, overwrite=to_overwrite)
+create_h_file(problem_dir_abspath, problem_module_name, overwrite=to_overwrite)
+create_cpp_file(problem_dir_abspath, problem_module_name, overwrite=to_overwrite)
+create_test_file(problem_dir_abspath, problem_module_name, overwrite=to_overwrite)
