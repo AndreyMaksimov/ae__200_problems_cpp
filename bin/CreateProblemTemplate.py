@@ -5,11 +5,12 @@ ALGOEXPERT_QUESTIONS_URL = 'https://www.algoexpert.io/questions/'
 ALGOEXPERT_ROOT_DIR = 'AlgoExpert'
 CATEGORY = 'Arrays'
 DIFFICULTY = 'Easy'
-PROBLEM_NAME = 'transpose-matrix'
+PROBLEM_NAME = 'three-number-sum'
 
 CMAKE_LISTS = 'CMakeLists.txt'
 
 project_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+problem_url = ALGOEXPERT_QUESTIONS_URL + '/' + PROBLEM_NAME
 
 
 def create_module_name(problem_name: str) -> str:
@@ -62,6 +63,11 @@ def create_cpp_file(path, name, overwrite=True):
             print(f'create_cpp_file warning: nothing to do')
             return
     with open(file_path, mode='w') as f:
+        print(f'// {problem_url}', file=f)
+        print('//', file=f)
+        print(f'// #{CATEGORY}', file=f)
+        print(f'// #{DIFFICULTY}', file=f)
+        print(file=f)
         print(f'#include "{name}.h"', file=f)
         print(file=f)
         print(f'namespace {problem_namespace} {{', file=f)
