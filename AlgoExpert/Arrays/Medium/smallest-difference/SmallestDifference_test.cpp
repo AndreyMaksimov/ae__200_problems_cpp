@@ -83,4 +83,12 @@ namespace
         const auto result = algoExpert::arrays::smallestDifference(arrayOne, arrayTwo);
         EXPECT_EQ(expected, result);
     }
+    TEST(smallestDifference, Case11)
+    {
+        const std::vector<int> arrayOne = {10, 1000, 2001};
+        const std::vector<int> arrayTwo = {-1441, -124, -25, 1014, 1500, 660, 410, 245, 530, 2002};
+        const std::vector<int> expected = {2001, 2002};
+        const auto result = algoExpert::arrays::smallestDifference(arrayOne, arrayTwo);
+        EXPECT_EQ(expected, result);
+    }
 }
