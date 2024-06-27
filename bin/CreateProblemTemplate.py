@@ -5,7 +5,7 @@ ALGOEXPERT_QUESTIONS_URL = 'https://www.algoexpert.io/questions/'
 ALGOEXPERT_ROOT_DIR = 'AlgoExpert'
 CATEGORY = 'Arrays'
 DIFFICULTY = 'Medium'
-PROBLEM_NAME = 'smallest-difference'
+PROBLEM_NAME = 'move-element-to-end'
 
 CMAKE_LISTS = 'CMakeLists.txt'
 

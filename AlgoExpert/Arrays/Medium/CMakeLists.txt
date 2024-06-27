@@ -2,3 +2,4 @@
 
 add_subdirectory(three-number-sum)
 add_subdirectory(smallest-difference)
+add_subdirectory(move-element-to-end)
