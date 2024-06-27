@@ -5,7 +5,7 @@ ALGOEXPERT_QUESTIONS_URL = 'https://www.algoexpert.io/questions/'
 ALGOEXPERT_ROOT_DIR = 'AlgoExpert'
 CATEGORY = 'Arrays'
 DIFFICULTY = 'Medium'
-PROBLEM_NAME = 'move-element-to-end'
+PROBLEM_NAME = 'monotonic-array'
 
 CMAKE_LISTS = 'CMakeLists.txt'
 
@@ -50,10 +50,10 @@ def create_h_file(path, name, overwrite=True):
             return
     with open(file_path, mode='w') as f:
         print('#pragma once', file=f)
-        print("#include <vector>")
+        print('#include <vector>', file=f)
         print(file=f)
         print(f'namespace {problem_namespace} {{', file=f)
-        print("\tusing std::vector;")
+        print('\tusing std::vector;', file =f)
         print('}', file=f)
 
 
