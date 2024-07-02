@@ -3,4 +3,5 @@
 
 namespace algoExpert::arrays {
 	using std::vector;
+    vector<int> arrayOfProducts(vector<int> array);
 }

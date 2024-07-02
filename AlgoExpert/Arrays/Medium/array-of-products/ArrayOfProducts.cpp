@@ -6,4 +6,8 @@
 #include "ArrayOfProducts.h"
 
 namespace algoExpert::arrays {
+    vector<int> arrayOfProducts(vector<int> array) {
+        // Write your code here.
+        return {};
+    }
 }
