@@ -5,7 +5,7 @@ ALGOEXPERT_QUESTIONS_URL = 'https://www.algoexpert.io/questions/'
 ALGOEXPERT_ROOT_DIR = 'AlgoExpert'
 CATEGORY = 'Arrays'
 DIFFICULTY = 'Medium'
-PROBLEM_NAME = 'longest-peak'
+PROBLEM_NAME = 'array-of-products'
 
 CMAKE_LISTS = 'CMakeLists.txt'
 
