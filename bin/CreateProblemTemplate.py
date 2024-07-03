@@ -5,7 +5,7 @@ ALGOEXPERT_QUESTIONS_URL = 'https://www.algoexpert.io/questions/'
 ALGOEXPERT_ROOT_DIR = 'AlgoExpert'
 CATEGORY = 'Arrays'
 DIFFICULTY = 'Medium'
-PROBLEM_NAME = 'array-of-products'
+PROBLEM_NAME = 'first-duplicate-value'
 
 CMAKE_LISTS = 'CMakeLists.txt'
 
