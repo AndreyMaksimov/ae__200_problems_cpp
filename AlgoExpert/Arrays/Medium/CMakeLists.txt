@@ -9,3 +9,4 @@
 #add_subdirectory(array-of-products)
 #add_subdirectory(first-duplicate-value)
 #add_subdirectory(merge-overlapping-intervals)
+add_subdirectory(best-seat)
