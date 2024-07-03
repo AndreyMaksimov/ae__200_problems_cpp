@@ -104,6 +104,16 @@ def create_cmake_file(abspath, path, name, overwrite=True):
         print(f'add_tests_for_problem({name})', file=f)
 
 
+def cmake_comment_subdirectories(path: str):
+    with open(path, mode='r') as f:
+        file_lines = f.readlines()
+    with open(path, mode='w') as f:
+        for line in file_lines:
+            if line.startswith('add_subdirectory'):
+                line = '#' + line
+            f.write(line)
+
+
 def update_group_cmake_file(group_path, name):
     cmake_path = os.path.join(group_path, CMAKE_LISTS)
     if not os.path.exists(cmake_path):
@@ -114,6 +124,7 @@ def update_group_cmake_file(group_path, name):
             if line_to_append in line:
                 print(f'update_group_cmake_file warning: "{line_to_append}" already exists in {cmake_path} nothing todo')
                 return
+    cmake_comment_subdirectories(cmake_path)
     with open(cmake_path, mode='a') as f:
         print(f'{line_to_append}', file=f)
     return
