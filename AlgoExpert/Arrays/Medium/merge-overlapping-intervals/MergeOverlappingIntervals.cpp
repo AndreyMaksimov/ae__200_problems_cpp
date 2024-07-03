@@ -6,4 +6,8 @@
 #include "MergeOverlappingIntervals.h"
 
 namespace algoExpert::arrays {
+    vector<vector<int>> mergeOverlappingIntervals(vector<vector<int>> intervals) {
+        // Write your code here.
+        return {};
+    }
 }
