@@ -6,4 +6,7 @@
 #include "FirstDuplicateValue.h"
 
 namespace algoExpert::arrays {
+    int firstDuplicateValue(vector<int> array) {
+        return -1;
+    }
 }
