@@ -6,4 +6,8 @@
 #include "MissingNumbers.h"
 
 namespace algoExpert::arrays {
+    vector<int> missingNumbers(vector<int> nums) {
+        // Write your code here.
+        return {};
+    }
 }
