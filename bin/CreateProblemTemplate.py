@@ -5,7 +5,7 @@ ALGOEXPERT_QUESTIONS_URL = 'https://www.algoexpert.io/questions/'
 ALGOEXPERT_ROOT_DIR = 'AlgoExpert'
 CATEGORY = 'Arrays'
 DIFFICULTY = 'Medium'
-PROBLEM_NAME = 'zero-sum-subarray'
+PROBLEM_NAME = 'missingNumbers'
 
 CMAKE_LISTS = 'CMakeLists.txt'
 
