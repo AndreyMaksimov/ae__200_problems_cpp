@@ -11,4 +11,5 @@
 #add_subdirectory(merge-overlapping-intervals)
 #add_subdirectory(best-seat)
 #add_subdirectory(zero-sum-subarray)
-add_subdirectory(missingNumbers)
+#add_subdirectory(missingNumbers)
+add_subdirectory(majority-element)
