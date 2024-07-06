@@ -12,4 +12,5 @@
 #add_subdirectory(best-seat)
 #add_subdirectory(zero-sum-subarray)
 #add_subdirectory(missingNumbers)
-add_subdirectory(majority-element)
+#add_subdirectory(majority-element)
+add_subdirectory(sweet-and-savory)
