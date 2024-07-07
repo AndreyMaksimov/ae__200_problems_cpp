@@ -2,20 +2,20 @@
 //
 // #Arrays
 // #Medium
+// #std::copy_if
+// #std::back_inserter
 
 #include <algorithm>
 #include <iostream>
-#include <iterator>
-#include <functional>
+#include <limits>
 #include "SweetAndSavory.h"
 
 namespace algoExpert::arrays {
     using std::sort, std::abs, std::copy_if, std::back_inserter;
     using std::cout, std::endl;
     vector<int> sweetAndSavory(vector<int> dishes, int target) {
-        const auto size = dishes.size();
         vector<int> empty_result = {0, 0};
-        if (size < 2) return empty_result;
+        if (dishes.size() < 2) return empty_result;
 
         vector<int> sweets;
         vector<int> savories;
@@ -35,9 +35,27 @@ namespace algoExpert::arrays {
         vector<int> result = empty_result;
 
         auto pos_sweet = sweets.begin();
-        auto pos_savory = sweets.begin();
+        auto pos_savory = savories.begin();
 
+        int sweet, savory;
+        int min_distance_to_target = std::numeric_limits<int>::max();
 
+        while (pos_sweet != sweets.end() && pos_savory != savories.end()) {
+            sweet = *pos_sweet;
+            savory = *pos_savory;
+            const auto sum_taste = sweet + savory;
+            if (sum_taste <= target) {
+                const auto distance_to_target = target - sum_taste;
+                if (min_distance_to_target > distance_to_target) {
+                    min_distance_to_target = distance_to_target;
+                    result = {sweet, savory};
+                }
+                ++pos_savory;
+            }
+            else {
+                ++pos_sweet;
+            }
+        }
         return result;
     }
 }
