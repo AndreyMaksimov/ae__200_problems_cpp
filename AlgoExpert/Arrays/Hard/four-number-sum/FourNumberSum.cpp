@@ -6,4 +6,8 @@
 #include "FourNumberSum.h"
 
 namespace algoExpert::arrays {
+    vector<vector<int>> fourNumberSum(vector<int> array, int targetSum) {
+        // Write your code here.
+        return {};
+    }
 }
