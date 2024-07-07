@@ -4,7 +4,7 @@ import os
 ALGOEXPERT_QUESTIONS_URL = 'https://www.algoexpert.io/questions/'
 ALGOEXPERT_ROOT_DIR = 'AlgoExpert'
 CATEGORY = 'Arrays'
-DIFFICULTY = 'Medium'
+DIFFICULTY = 'Hard'
 PROBLEM_NAME = 'sweet-and-savory'
 
 CMAKE_LISTS = 'CMakeLists.txt'
