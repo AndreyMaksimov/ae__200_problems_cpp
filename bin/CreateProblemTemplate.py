@@ -5,7 +5,7 @@ ALGOEXPERT_QUESTIONS_URL = 'https://www.algoexpert.io/questions/'
 ALGOEXPERT_ROOT_DIR = 'AlgoExpert'
 CATEGORY = 'Arrays'
 DIFFICULTY = 'Hard'
-PROBLEM_NAME = 'subarray-sort'
+PROBLEM_NAME = 'largest-range'
 
 CMAKE_LISTS = 'CMakeLists.txt'
 
