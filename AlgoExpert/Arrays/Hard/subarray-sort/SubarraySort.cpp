@@ -6,4 +6,8 @@
 #include "SubarraySort.h"
 
 namespace algoExpert::arrays {
+    vector<int> subarraySort(vector<int> array) {
+        // Write your code here.
+        return {};
+    }
 }
