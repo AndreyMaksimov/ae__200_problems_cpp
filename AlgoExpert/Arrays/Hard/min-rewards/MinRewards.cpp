@@ -6,4 +6,8 @@
 #include "MinRewards.h"
 
 namespace algoExpert::arrays {
+    int minRewards(vector<int> scores) {
+        // Write your code here.
+        return -1;
+    }
 }
