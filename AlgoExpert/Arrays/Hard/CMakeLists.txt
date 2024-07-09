@@ -2,4 +2,5 @@
 
 #add_subdirectory(four-number-sum)
 #add_subdirectory(subarray-sort)
-add_subdirectory(largest-range)
+#add_subdirectory(largest-range)
+add_subdirectory(min-rewards)
