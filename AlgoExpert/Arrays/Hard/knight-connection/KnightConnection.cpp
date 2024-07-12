@@ -6,4 +6,8 @@
 #include "KnightConnection.h"
 
 namespace algoExpert::arrays {
+    int knightConnection(vector<int> knightA, vector<int> knightB) {
+        // Write your code here.
+        return -1;
+    }
 }
