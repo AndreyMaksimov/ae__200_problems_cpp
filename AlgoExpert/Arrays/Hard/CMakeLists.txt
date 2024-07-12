@@ -4,4 +4,5 @@
 #add_subdirectory(subarray-sort)
 #add_subdirectory(largest-range)
 #add_subdirectory(min-rewards)
-add_subdirectory(zigzag-traverse)
+#add_subdirectory(zigzag-traverse)
+add_subdirectory(longest-subarray-with-sum)
