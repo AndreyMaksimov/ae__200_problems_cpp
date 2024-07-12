@@ -5,7 +5,7 @@ ALGOEXPERT_QUESTIONS_URL = 'https://www.algoexpert.io/questions/'
 ALGOEXPERT_ROOT_DIR = 'AlgoExpert'
 CATEGORY = 'Arrays'
 DIFFICULTY = 'Hard'
-PROBLEM_NAME = 'longest-subarray-with-sum'
+PROBLEM_NAME = 'knight-connection'
 
 CMAKE_LISTS = 'CMakeLists.txt'
 
