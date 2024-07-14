@@ -3,6 +3,9 @@
 // #Arrays
 // #Hard
 
+// Useful links:
+// https://www.cyberforum.ru/python-tasks/thread3108591.html
+
 #include "KnightConnection.h"
 
 namespace algoExpert::arrays {
