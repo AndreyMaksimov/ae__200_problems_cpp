@@ -6,4 +6,8 @@
 #include "CountSquares.h"
 
 namespace algoExpert::arrays {
+    int countSquares(vector<vector<int>> points) {
+        // Write your code here.
+        return -1;
+    }
 }
