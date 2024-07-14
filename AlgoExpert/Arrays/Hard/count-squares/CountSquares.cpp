@@ -2,6 +2,13 @@
 //
 // #Arrays
 // #Hard
+// #std::hash
+// #std::equal_to
+//
+
+// 1) Create hash for all lines between all ponts pairs
+// 2) Find "paired" line to each line to form a square
+//
 
 #include <unordered_set>
 #include <utility>
