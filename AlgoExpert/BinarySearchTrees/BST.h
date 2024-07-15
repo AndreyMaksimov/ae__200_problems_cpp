@@ -12,6 +12,11 @@ namespace algoExpert::binarySearchTrees {
         BST(int val);
         BST& insert(int val);
 
-        static BST& CreateBST(std::vector<std::string>& bst_string);
+        ~BST() {
+            if (left) delete left;
+            if (right) delete right;
+        }
+
+        static BST* CreateBST(int root, std::vector<std::string>& bst_data);
     };
 }
