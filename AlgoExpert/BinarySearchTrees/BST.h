@@ -3,20 +3,25 @@
 #include <vector>
 
 namespace algoExpert::binarySearchTrees {
+    /**
+     * Helper class
+     * 1) Parses test cases
+     * 2) Fill in BST structure to pass it to a problem solving function
+     */
     class BST {
     public:
         int value;
-        BST* left;
-        BST* right;
+        BST* left = nullptr;
+        BST* right = nullptr;
 
-        BST(int val);
+        explicit BST(int val);
         BST& insert(int val);
 
         ~BST() {
-            if (left) delete left;
-            if (right) delete right;
+            delete left;
+            delete right;
         }
 
-        static BST* CreateBST(int root, std::vector<std::string>& bst_data);
+        static BST* CreateBST(int root, const std::vector<std::string>& bst_data);
     };
 }
