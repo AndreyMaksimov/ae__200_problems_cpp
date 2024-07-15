@@ -7,4 +7,4 @@
 #add_subdirectory(zigzag-traverse)
 #add_subdirectory(longest-subarray-with-sum)
 #add_subdirectory(knight-connection)
-add_subdirectory(count-squares)
+#add_subdirectory(count-squares)

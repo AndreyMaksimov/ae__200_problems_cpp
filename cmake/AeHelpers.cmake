@@ -17,9 +17,20 @@ function(add_tests_for_problem problem_name)
     target_include_directories(${problem_test_exe} PUBLIC
             ${googletest_include}
     )
+    if(AE_BST)
+        target_include_directories(${problem_test_exe} PUBLIC
+                ${BST_INCLUDE_DIR}
+        )
+    endif()
+
     target_link_libraries(${problem_test_exe} PUBLIC
             gtest_main
     )
+    if(AE_BST)
+        target_link_libraries(${problem_test_exe} PUBLIC
+                BinarySearchTrees
+        )
+    endif()
 
     gtest_discover_tests(${problem_test_exe})
 endfunction(add_tests_for_problem)

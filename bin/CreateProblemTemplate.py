@@ -3,9 +3,9 @@ import os
 
 ALGOEXPERT_QUESTIONS_URL = 'https://www.algoexpert.io/questions/'
 ALGOEXPERT_ROOT_DIR = 'AlgoExpert'
-CATEGORY = 'Arrays'
-DIFFICULTY = 'Hard'
-PROBLEM_NAME = 'count-squares'
+CATEGORY = 'BinarySearchTrees'
+DIFFICULTY = 'Easy'
+PROBLEM_NAME = 'find-closest-value-in-bst'
 
 CMAKE_LISTS = 'CMakeLists.txt'
 
