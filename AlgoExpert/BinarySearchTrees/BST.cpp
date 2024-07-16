@@ -8,7 +8,7 @@ namespace algoExpert::binarySearchTrees {
     }
 
     BST& BST::insert(const int val) {
-        if (val > value) {
+        if (val >= value) {
             if (right) return right->insert(val);
             right = new BST(val);
             return *right;
@@ -43,10 +43,15 @@ namespace algoExpert::binarySearchTrees {
     };
 
     BST* BST::CreateBST(const int root, const std::vector<std::string>& bst_data) {
-        const auto pbst_root = new BST(root);
+        BST* pbst_root = nullptr;
         for (const auto& line: bst_data) {
             const auto node = bst_item(line);
-            pbst_root->insert(node.value);
+            if (pbst_root == nullptr) {
+                pbst_root = new BST(node.value);
+            }
+            else {
+                pbst_root->insert(node.value);
+            }
         }
         return pbst_root;
     }
