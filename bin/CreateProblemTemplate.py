@@ -5,7 +5,7 @@ ALGOEXPERT_QUESTIONS_URL = 'https://www.algoexpert.io/questions/'
 ALGOEXPERT_ROOT_DIR = 'AlgoExpert'
 CATEGORY = 'BinarySearchTrees'
 DIFFICULTY = 'Easy'
-PROBLEM_NAME = 'validate-bst'
+PROBLEM_NAME = 'bst-traversal'
 
 CMAKE_LISTS = 'CMakeLists.txt'
 
