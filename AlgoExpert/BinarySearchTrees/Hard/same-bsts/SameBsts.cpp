@@ -6,4 +6,8 @@
 #include "SameBsts.h"
 
 namespace algoExpert::binarySearchTrees {
+    bool sameBsts(vector<int> arrayOne, vector<int> arrayTwo) {
+        // Write your code here.
+        return false;
+    }
 }
