@@ -5,7 +5,7 @@ ALGOEXPERT_QUESTIONS_URL = 'https://www.algoexpert.io/questions/'
 ALGOEXPERT_ROOT_DIR = 'AlgoExpert'
 CATEGORY = 'BinarySearchTrees'
 DIFFICULTY = 'Hard'
-PROBLEM_NAME = 'same-bsts'
+PROBLEM_NAME = 'validate-three-nodes'
 
 CMAKE_LISTS = 'CMakeLists.txt'
 
