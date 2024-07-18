@@ -4,8 +4,8 @@ import os
 ALGOEXPERT_QUESTIONS_URL = 'https://www.algoexpert.io/questions/'
 ALGOEXPERT_ROOT_DIR = 'AlgoExpert'
 CATEGORY = 'BinarySearchTrees'
-DIFFICULTY = 'Medium'
-PROBLEM_NAME = 'find-kth-largest-value-in-bst'
+DIFFICULTY = 'Hard'
+PROBLEM_NAME = 'same-bsts'
 
 CMAKE_LISTS = 'CMakeLists.txt'
 
