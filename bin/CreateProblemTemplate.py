@@ -4,8 +4,8 @@ import os
 ALGOEXPERT_QUESTIONS_URL = 'https://www.algoexpert.io/questions/'
 ALGOEXPERT_ROOT_DIR = 'AlgoExpert'
 CATEGORY = 'BinarySearchTrees'
-DIFFICULTY = 'Hard'
-PROBLEM_NAME = 'validate-three-nodes'
+DIFFICULTY = 'Medium'
+PROBLEM_NAME = 'reconstruct-bst'
 
 CMAKE_LISTS = 'CMakeLists.txt'
 
