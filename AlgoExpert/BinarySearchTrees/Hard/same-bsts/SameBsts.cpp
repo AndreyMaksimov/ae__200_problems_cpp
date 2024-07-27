@@ -2,6 +2,7 @@
 //
 // #BinarySearchTrees
 // #Hard
+// TODO: implement Hint4
 
 #include "SameBsts.h"
 
