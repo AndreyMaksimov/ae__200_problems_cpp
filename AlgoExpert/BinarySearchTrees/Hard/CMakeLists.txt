@@ -1,4 +1,4 @@
 # AlgoExpert/BinarySearchTrees/Hard/CMakeLists.txt
 
-add_subdirectory(same-bsts)
-#add_subdirectory(validate-three-nodes)
+#add_subdirectory(same-bsts)
+add_subdirectory(validate-three-nodes)
