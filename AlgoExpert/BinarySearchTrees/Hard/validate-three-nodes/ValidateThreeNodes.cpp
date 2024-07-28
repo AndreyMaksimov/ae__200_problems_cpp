@@ -22,6 +22,5 @@ namespace algoExpert::binarySearchTrees {
         const auto value = nodeTwo->value;
         return findInBST(nodeOne,value) && findInBST(nodeTwo,nodeThree->value) ||
             (findInBST(nodeThree,value) && findInBST(nodeTwo,nodeOne->value));
-        return false;
     }
 }
