@@ -5,7 +5,7 @@ ALGOEXPERT_QUESTIONS_URL = 'https://www.algoexpert.io/questions/'
 ALGOEXPERT_ROOT_DIR = 'AlgoExpert'
 CATEGORY = 'BinarySearchTrees'
 DIFFICULTY = 'Hard'
-PROBLEM_NAME = 'repair-bst'
+PROBLEM_NAME = 'sum-bsts'
 
 CMAKE_LISTS = 'CMakeLists.txt'
 
