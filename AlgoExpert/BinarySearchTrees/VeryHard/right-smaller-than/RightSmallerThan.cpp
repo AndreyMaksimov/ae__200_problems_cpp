@@ -6,4 +6,8 @@
 #include "RightSmallerThan.h"
 
 namespace algoExpert::binarySearchTrees {
+    vector<int> rightSmallerThan(vector<int> array) {
+        // Write your code here.
+        return {};
+    }
 }
