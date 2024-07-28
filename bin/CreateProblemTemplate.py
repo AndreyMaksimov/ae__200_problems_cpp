@@ -4,8 +4,8 @@ import os
 ALGOEXPERT_QUESTIONS_URL = 'https://www.algoexpert.io/questions/'
 ALGOEXPERT_ROOT_DIR = 'AlgoExpert'
 CATEGORY = 'BinarySearchTrees'
-DIFFICULTY = 'Hard'
-PROBLEM_NAME = 'sum-bsts'
+DIFFICULTY = 'VeryHard'
+PROBLEM_NAME = 'right-smaller-than'
 
 CMAKE_LISTS = 'CMakeLists.txt'
 
