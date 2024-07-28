@@ -6,4 +6,8 @@
 #include "SumBsts.h"
 
 namespace algoExpert::binarySearchTrees {
+    int sumBsts(BinaryTree *tree) {
+        // Write your code here.
+        return -1;
+    }
 }
