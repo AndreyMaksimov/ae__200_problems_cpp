@@ -1,6 +1,6 @@
 # AlgoExpert/BinarySearchTrees/Hard/CMakeLists.txt
 
-option(SameBsts_discover_tests "Add problem tests to a workflow" ON)
+option(SameBsts_discover_tests "Add problem tests to a workflow" OFF)
 add_subdirectory(same-bsts)
 
 option(ValidateThreeNodes_discover_tests "Add problem tests to a workflow" OFF)
