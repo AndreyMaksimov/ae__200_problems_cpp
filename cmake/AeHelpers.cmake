@@ -3,7 +3,7 @@
 # 1) problem_name.cpp
 # 2) problem_name.h
 # 3) problem_name_test.cpp
-function(add_tests_for_problem problem_name)
+function(add_tests_for_problem problem_name discover_test)
     set(problem_test_exe ${problem_name}_test.exe)
 
     add_executable(${problem_test_exe})
@@ -32,5 +32,8 @@ function(add_tests_for_problem problem_name)
         )
     endif()
 
-    gtest_discover_tests(${problem_test_exe})
+    if (${discover_test})
+        message ("===== add discover tests: " ${problem_test_exe})
+        gtest_discover_tests(${problem_test_exe})
+    endif()
 endfunction(add_tests_for_problem)

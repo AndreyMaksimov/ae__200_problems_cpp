@@ -1,3 +1,3 @@
 # AlgoExpert/BinarySearchTrees/Hard/validate-three-nodes/CMakeLists.txt
 
-add_tests_for_problem(ValidateThreeNodes)
+add_tests_for_problem(ValidateThreeNodes ValidateThreeNodes_discover_tests)

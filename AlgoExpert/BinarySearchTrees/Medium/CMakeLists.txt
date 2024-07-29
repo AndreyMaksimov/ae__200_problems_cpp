@@ -1,8 +1,19 @@
 # AlgoExpert/BinarySearchTrees/Medium/CMakeLists.txt
 
-#add_subdirectory(bst-construction)
-#add_subdirectory(validate-bst)
-#add_subdirectory(bst-traversal)
-#add_subdirectory(min-height-bst)
-#add_subdirectory(find-kth-largest-value-in-bst)
-#add_subdirectory(reconstruct-bst)
+option(BstConstruction_discover_tests "Add problem tests to a workflow" ON)
+add_subdirectory(bst-construction)
+
+option(ValidateBst_discover_tests "Add problem tests to a workflow" ON)
+add_subdirectory(validate-bst)
+
+option(BstTraversal_discover_tests "Add problem tests to a workflow" ON)
+add_subdirectory(bst-traversal)
+
+option(MinHeightBst_discover_tests "Add problem tests to a workflow" ON)
+add_subdirectory(min-height-bst)
+
+option(FindKthLargestValueInBst_discover_tests "Add problem tests to a workflow" ON)
+add_subdirectory(find-kth-largest-value-in-bst)
+
+option(ReconstructBst_discover_tests "Add problem tests to a workflow" ON)
+add_subdirectory(reconstruct-bst)

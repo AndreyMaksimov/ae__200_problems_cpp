@@ -1,3 +1,3 @@
 # AlgoExpert/BinarySearchTrees/Medium/find-kth-largest-value-in-bst/CMakeLists.txt
 
-add_tests_for_problem(FindKthLargestValueInBst)
+add_tests_for_problem(FindKthLargestValueInBst FindKthLargestValueInBst_discover_tests)
