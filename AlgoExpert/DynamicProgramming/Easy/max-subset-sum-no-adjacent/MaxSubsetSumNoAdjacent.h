@@ -3,4 +3,5 @@
 
 namespace algoExpert::dynamicProgramming {
 	using std::vector;
+	int maxSubsetSumNoAdjacent(vector<int> array);
 }
