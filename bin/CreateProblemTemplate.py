@@ -3,11 +3,12 @@ import os
 
 ALGOEXPERT_QUESTIONS_URL = 'https://www.algoexpert.io/questions/'
 ALGOEXPERT_ROOT_DIR = 'AlgoExpert'
-CATEGORY = 'BinarySearchTrees'
-DIFFICULTY = 'VeryHard'
-PROBLEM_NAME = 'right-smaller-than'
+CATEGORY = 'DynamicProgramming'
+DIFFICULTY = 'Easy'
+PROBLEM_NAME = 'max-subset-sum-no-adjacent'
 
 CMAKE_LISTS = 'CMakeLists.txt'
+DISCOVER_TESTS = '_discover_tests'
 
 project_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 problem_url = ALGOEXPERT_QUESTIONS_URL + PROBLEM_NAME
@@ -101,32 +102,41 @@ def create_cmake_file(abspath, path, name, overwrite=True):
     with open(cmake_path, mode='w') as f:
         print(f'# {path}/{CMAKE_LISTS}', file=f)
         print(file=f)
-        print(f'add_tests_for_problem({name})', file=f)
+        print(f'add_tests_for_problem({name} {name}{DISCOVER_TESTS})', file=f)
 
 
-def cmake_comment_subdirectories(path: str):
+def cmake_switch_tests_to_off(path: str):
     with open(path, mode='r') as f:
         file_lines = f.readlines()
     with open(path, mode='w') as f:
         for line in file_lines:
-            if line.startswith('add_subdirectory'):
-                line = '#' + line
+            line = line.replace(' ON)', ' OFF)')
             f.write(line)
 
 
-def update_group_cmake_file(group_path, name):
+def update_group_cmake_file(group_path, dashed_name, capitalized_name):
+    """
+
+    :param group_path:
+    :param dashed_name: it is like 'this-problem-name'
+    :param capitalized_name: it is another representation 'ThisProblemName'
+    :return:
+    """
     cmake_path = os.path.join(group_path, CMAKE_LISTS)
     if not os.path.exists(cmake_path):
         raise FileNotFoundError(f'error - {cmake_path} does not exist')
-    line_to_append = f'add_subdirectory({name})'
+    line_option_to_append = f'option({capitalized_name}{DISCOVER_TESTS} "Add problem tests to a workflow" ON)'
+    line_directory_to_append = f'add_subdirectory({dashed_name})'
     with open(cmake_path, mode='r') as f:
         for line in f:
-            if line_to_append in line:
-                print(f'update_group_cmake_file warning: "{line_to_append}" already exists in {cmake_path} nothing todo')
+            if line_directory_to_append in line:
+                print(f'update_group_cmake_file warning: "{line_directory_to_append}" already exists in {cmake_path} nothing todo')
                 return
-    cmake_comment_subdirectories(cmake_path)
+    cmake_switch_tests_to_off(cmake_path)
     with open(cmake_path, mode='a') as f:
-        print(f'{line_to_append}', file=f)
+        print(file=f)
+        print(f'{line_option_to_append}', file=f)
+        print(f'{line_directory_to_append}', file=f)
     return
 
 
@@ -141,7 +151,7 @@ print(problem_module_name)
 
 to_overwrite = False
 
-update_group_cmake_file(problems_group_abspath, PROBLEM_NAME)
+update_group_cmake_file(problems_group_abspath, PROBLEM_NAME, problem_module_name)
 create_cmake_file(problem_dir_abspath, problem_dir_path, problem_module_name, overwrite=to_overwrite)
 create_h_file(problem_dir_abspath, problem_module_name, overwrite=to_overwrite)
 create_cpp_file(problem_dir_abspath, problem_module_name, overwrite=to_overwrite)
