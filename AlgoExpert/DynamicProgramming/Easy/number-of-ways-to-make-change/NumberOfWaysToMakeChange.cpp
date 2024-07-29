@@ -6,4 +6,8 @@
 #include "NumberOfWaysToMakeChange.h"
 
 namespace algoExpert::dynamicProgramming {
+    int numberOfWaysToMakeChange(int n, vector<int> denoms) {
+        // Write your code here.
+        return -1;
+    }
 }
