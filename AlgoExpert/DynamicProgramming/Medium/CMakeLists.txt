@@ -1,4 +1,4 @@
-# AlgoExpert/DynamicProgramming/Easy/CMakeLists.txt
+# AlgoExpert/DynamicProgramming/Medium/CMakeLists.txt
 
 option(MaxSubsetSumNoAdjacent_discover_tests "Add problem tests to a workflow" OFF)
 add_subdirectory(max-subset-sum-no-adjacent)
