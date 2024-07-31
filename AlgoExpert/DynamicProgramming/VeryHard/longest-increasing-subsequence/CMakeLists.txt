@@ -1,0 +1,3 @@
+# AlgoExpert/DynamicProgramming/VeryHard/longest-increasing-subsequence/CMakeLists.txt
+
+add_tests_for_problem(LongestIncreasingSubsequence LongestIncreasingSubsequence_discover_tests)
