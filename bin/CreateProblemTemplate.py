@@ -4,8 +4,8 @@ import os
 ALGOEXPERT_QUESTIONS_URL = 'https://www.algoexpert.io/questions/'
 ALGOEXPERT_ROOT_DIR = 'AlgoExpert'
 CATEGORY = 'DynamicProgramming'
-DIFFICULTY = 'Easy'
-PROBLEM_NAME = 'number-of-ways-to-make-change'
+DIFFICULTY = 'Medium'
+PROBLEM_NAME = 'min-number-of-coins-for-change'
 
 CMAKE_LISTS = 'CMakeLists.txt'
 DISCOVER_TESTS = '_discover_tests'
