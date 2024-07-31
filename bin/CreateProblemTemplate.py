@@ -52,9 +52,10 @@ def create_h_file(path, name, overwrite=True):
     with open(file_path, mode='w') as f:
         print('#pragma once', file=f)
         print('#include <vector>', file=f)
+        print('#include <string>', file=f)
         print(file=f)
         print(f'namespace {problem_namespace} {{', file=f)
-        print('\tusing std::vector;', file =f)
+        print('\tusing std::vector, std::string;', file =f)
         print('}', file=f)
 
 
