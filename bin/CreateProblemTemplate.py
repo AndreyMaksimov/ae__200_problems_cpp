@@ -5,7 +5,7 @@ ALGOEXPERT_QUESTIONS_URL = 'https://www.algoexpert.io/questions/'
 ALGOEXPERT_ROOT_DIR = 'AlgoExpert'
 CATEGORY = 'DynamicProgramming'
 DIFFICULTY = 'Hard'
-PROBLEM_NAME = 'min-number-of-jumps'
+PROBLEM_NAME = 'water-area'
 
 CMAKE_LISTS = 'CMakeLists.txt'
 DISCOVER_TESTS = '_discover_tests'
