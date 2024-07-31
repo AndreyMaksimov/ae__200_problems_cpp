@@ -1,0 +1,3 @@
+# AlgoExpert/DynamicProgramming/Hard/max-sum-increasing-subsequence/CMakeLists.txt
+
+add_tests_for_problem(MaxSumIncreasingSubsequence MaxSumIncreasingSubsequence_discover_tests)

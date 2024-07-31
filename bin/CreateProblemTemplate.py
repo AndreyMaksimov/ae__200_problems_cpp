@@ -4,8 +4,8 @@ import os
 ALGOEXPERT_QUESTIONS_URL = 'https://www.algoexpert.io/questions/'
 ALGOEXPERT_ROOT_DIR = 'AlgoExpert'
 CATEGORY = 'DynamicProgramming'
-DIFFICULTY = 'Medium'
-PROBLEM_NAME = 'number-of-ways-to-traverse-graph'
+DIFFICULTY = 'Hard'
+PROBLEM_NAME = 'max-sum-increasing-subsequence'
 
 CMAKE_LISTS = 'CMakeLists.txt'
 DISCOVER_TESTS = '_discover_tests'
