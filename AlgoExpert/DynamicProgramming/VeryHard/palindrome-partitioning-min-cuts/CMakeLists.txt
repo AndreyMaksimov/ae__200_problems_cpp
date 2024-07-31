@@ -1,0 +1,3 @@
+# AlgoExpert/DynamicProgramming/VeryHard/palindrome-partitioning-min-cuts/CMakeLists.txt
+
+add_tests_for_problem(PalindromePartitioningMinCuts PalindromePartitioningMinCuts_discover_tests)

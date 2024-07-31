@@ -5,7 +5,7 @@ ALGOEXPERT_QUESTIONS_URL = 'https://www.algoexpert.io/questions/'
 ALGOEXPERT_ROOT_DIR = 'AlgoExpert'
 CATEGORY = 'DynamicProgramming'
 DIFFICULTY = 'VeryHard'
-PROBLEM_NAME = 'max-profit-with-k-transactions'
+PROBLEM_NAME = 'palindrome-partitioning-min-cuts'
 
 CMAKE_LISTS = 'CMakeLists.txt'
 DISCOVER_TESTS = '_discover_tests'
