@@ -1,0 +1,3 @@
+# AlgoExpert/DynamicProgramming/VeryHard/max-profit-with-k-transactions/CMakeLists.txt
+
+add_tests_for_problem(MaxProfitWithKTransactions MaxProfitWithKTransactions_discover_tests)

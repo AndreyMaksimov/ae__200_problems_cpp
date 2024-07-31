@@ -30,5 +30,5 @@ add_subdirectory(maximize-expression)
 option(DiceThrows_discover_tests "Add problem tests to a workflow" OFF)
 add_subdirectory(dice-throws)
 
-option(JuiceBottling_discover_tests "Add problem tests to a workflow" ON)
+option(JuiceBottling_discover_tests "Add problem tests to a workflow" OFF)
 add_subdirectory(juice-bottling)
