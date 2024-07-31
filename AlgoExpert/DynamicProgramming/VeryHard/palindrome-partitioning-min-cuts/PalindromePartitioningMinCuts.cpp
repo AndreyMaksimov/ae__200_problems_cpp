@@ -6,4 +6,8 @@
 #include "PalindromePartitioningMinCuts.h"
 
 namespace algoExpert::dynamicProgramming {
+    int palindromePartitioningMinCuts(string string) {
+        // Write your code here.
+        return -1;
+    }
 }

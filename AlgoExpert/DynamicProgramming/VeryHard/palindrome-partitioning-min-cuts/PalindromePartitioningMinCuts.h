@@ -4,4 +4,5 @@
 
 namespace algoExpert::dynamicProgramming {
 	using std::vector, std::string;
+	int palindromePartitioningMinCuts(string string);
 }
