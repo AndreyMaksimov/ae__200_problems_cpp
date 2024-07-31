@@ -5,7 +5,7 @@ ALGOEXPERT_QUESTIONS_URL = 'https://www.algoexpert.io/questions/'
 ALGOEXPERT_ROOT_DIR = 'AlgoExpert'
 CATEGORY = 'DynamicProgramming'
 DIFFICULTY = 'Hard'
-PROBLEM_NAME = 'longest-common-subsequence'
+PROBLEM_NAME = 'min-number-of-jumps'
 
 CMAKE_LISTS = 'CMakeLists.txt'
 DISCOVER_TESTS = '_discover_tests'
