@@ -1,0 +1,3 @@
+# AlgoExpert/DynamicProgramming/VeryHard/longest-string-chain/CMakeLists.txt
+
+add_tests_for_problem(LongestStringChain LongestStringChain_discover_tests)
