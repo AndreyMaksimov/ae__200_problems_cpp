@@ -1,0 +1,3 @@
+# AlgoExpert/DynamicProgramming/Medium/number-of-ways-to-traverse-graph/CMakeLists.txt
+
+add_tests_for_problem(NumberOfWaysToTraverseGraph NumberOfWaysToTraverseGraph_discover_tests)
