@@ -1,0 +1,3 @@
+# AlgoExpert/DynamicProgramming/Hard/longest-common-subsequence/CMakeLists.txt
+
+add_tests_for_problem(LongestCommonSubsequence LongestCommonSubsequence_discover_tests)
