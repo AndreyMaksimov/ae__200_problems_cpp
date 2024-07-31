@@ -6,4 +6,8 @@
 #include "MinNumberOfCoinsForChange.h"
 
 namespace algoExpert::dynamicProgramming {
+    int minNumberOfCoinsForChange(int n, vector<int> denoms) {
+        // Write your code here.
+        return -1;
+    }
 }
