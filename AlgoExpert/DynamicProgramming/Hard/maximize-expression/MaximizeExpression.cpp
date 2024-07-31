@@ -6,4 +6,8 @@
 #include "MaximizeExpression.h"
 
 namespace algoExpert::dynamicProgramming {
+    int maximizeExpression(vector<int> array) {
+        // Write your code here.
+        return -1;
+    }
 }
