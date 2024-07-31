@@ -1,0 +1,3 @@
+# AlgoExpert/DynamicProgramming/Hard/maximize-expression/CMakeLists.txt
+
+add_tests_for_problem(MaximizeExpression MaximizeExpression_discover_tests)
