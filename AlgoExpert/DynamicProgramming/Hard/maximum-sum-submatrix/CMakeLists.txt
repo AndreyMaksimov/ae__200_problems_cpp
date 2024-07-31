@@ -1,0 +1,3 @@
+# AlgoExpert/DynamicProgramming/Hard/maximum-sum-submatrix/CMakeLists.txt
+
+add_tests_for_problem(MaximumSumSubmatrix MaximumSumSubmatrix_discover_tests)
