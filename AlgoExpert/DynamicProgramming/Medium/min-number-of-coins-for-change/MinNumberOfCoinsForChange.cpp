@@ -2,17 +2,14 @@
 //
 // #DynamicProgramming
 // #Medium
+//
+// Hint: useful to learn: set breakpoint and see how the mem[] content is changed
 
 #include <algorithm>
-#include <deque>
-#include <iostream>
-#include <limits>
 #include "MinNumberOfCoinsForChange.h"
 
 namespace algoExpert::dynamicProgramming {
-    // using std::sort, std::greater, std::back_inserter, std::deque, std::numeric_limits,
     using std::min, std::sort;
-    using std::cout, std::endl;
 
     int minNumberOfCoinsForChange(int n, vector<int> denoms) {
         if (n == 0 ) return 0;
@@ -20,20 +17,17 @@ namespace algoExpert::dynamicProgramming {
         vector<int> mem(n+1,-1);
         mem[0] = 0;
         for (const auto d: denoms) {
-            for (int i = 1; i<=n ; ++i) {
-                auto ncoins = i / d;
-                if (ncoins == 0) continue;
-                auto rem = i % d;
-                if (mem[rem] == -1) continue;
-                ncoins += mem[rem];
-                if (mem[i] == -1) {
-                    mem[i] = ncoins;
-                }
-                else {
-                    mem[i] = min(mem[i], ncoins);
+            for (int i = d; i<=n ; ++i) {
+                if (mem[i-d] != -1) {
+                    if (mem[i] == -1 && i % d == 0) {
+                        mem[i] = i/d;
+                    }
+                    else {
+                        mem[i] = min(mem[i], mem[i-d]+1);
+                    }
                 }
             }
-            int dummy = 42;
+            int k = 42;
         }
         return mem[n];
     }
