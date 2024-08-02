@@ -2,51 +2,47 @@
 //
 // #DynamicProgramming
 // #Hard
+//
+// https://skillbox.ru/media/code/dinamicheskoe_programmirovanie_eto_prosto_reshaem_zadachu_o_ryukzake/
+//
 
 #include "KnapsackProblem.h"
 
 namespace algoExpert::dynamicProgramming {
-
-    // each cell will contain list (vector) of items indicies
-    typedef vector<int> cell_t;
-
     vector<vector<int>> knapsackProblem(vector<vector<int>> items, int capacity) {
-        const auto item1 = items[0];
-        const auto value1 = item1[0];
-        const auto weight1 = item1[1];
-
-        cell_t empty_cell;
+        // each cell will contain list (vector) of items indicies
+        typedef vector<int> cell_t;
         const auto nitems = static_cast<int>(items.size());
+
+        // create "memoization" matrix
         vector<vector<cell_t>> mem((nitems+1), vector<cell_t>(capacity+1));
 
-
-        // fill in 1-st line
+        // fill in 1-st matrix row by 1-st item
+        const auto item0_weight = items[0][1];
         for (int i=1; i<=capacity; ++i) {
-            if (weight1 <= i) {
-                auto item = empty_cell;
-                item.push_back(0);
-                mem[1][i] = item;
-            }
-            else {
-                mem[1][i] = empty_cell;
+            if (item0_weight <= i) {
+                auto& cell = mem[1][i];
+                cell.push_back(0);
             }
         }
 
+        // helper function to sum up cell items (their values)
         auto cell_value = [&items](const cell_t& cell) {
-            int v = 0;
+            int sum_value = 0;
             for(const auto i: cell) {
-                v += items[i][0];
+                sum_value += items[i][0];
             }
-            return v;
+            return sum_value;
         };
 
         for (int i = 2; i<=nitems ; ++i) {
+            const auto current_item_index = i - 1;
+            const auto& current_item = items[current_item_index];
+            const auto& current_value = current_item[0];
+            const auto& current_weight = current_item[1];
             for (int j=1; j<=capacity; ++j) {
                 auto& current_cell = mem[i][j];
                 const auto& cell_above = mem[i-1][j];
-                const auto& current_item = items[i-1];
-                const auto& current_value = current_item[0];
-                const auto& current_weight = current_item[1];
                 const auto left_j = j - current_weight;
                 if (left_j < 0) {
                     current_cell = cell_above;
@@ -56,10 +52,9 @@ namespace algoExpert::dynamicProgramming {
                     const auto above_left_value = cell_value(cell_above_left);
                     const auto above_value = cell_value(cell_above);
                     if ( (above_left_value + current_value) > above_value) {
-                        auto new_ij_cell = cell_above_left;
-                        // actually here we do: new_ij_cell = cell_above_left + current_cell
-                        new_ij_cell.push_back(i-1);
-                        current_cell = new_ij_cell;
+                        // actually here we do: current_cell = cell_above_left + current_item
+                        current_cell = cell_above_left;
+                        current_cell.push_back(current_item_index);
                     }
                     else {
                         current_cell = cell_above;
@@ -72,7 +67,7 @@ namespace algoExpert::dynamicProgramming {
         const auto answ_value = cell_value(answ_indices);
 
         return {
-        {answ_value},    // total value
+        {answ_value},  // total value
         answ_indices,  // item indices
       };
     }
