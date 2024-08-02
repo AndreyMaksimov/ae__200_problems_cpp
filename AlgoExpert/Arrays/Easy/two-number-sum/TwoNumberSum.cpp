@@ -4,6 +4,9 @@
 // #easy
 // #std::vector
 // #std::count
+//
+// https://www.youtube.com/watch?v=veJCKqtusK8
+//
 
 #include <vector>
 #include <unordered_set>
