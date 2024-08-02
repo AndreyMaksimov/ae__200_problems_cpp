@@ -7,20 +7,6 @@
 
 namespace algoExpert::dynamicProgramming {
 
-    // class Item {
-    // public:
-    //     int value;
-    //     int weight;
-    //     Item() = delete;
-    //     explicit Item(const vector<int>& v ) :
-    //     value(v[0]),
-    //     weight(v[1])
-    //     {}
-    // };
-    // class Cell {
-    //     vector<
-    // } cell_t;
-
     // each cell will contain list (vector) of items indicies
     typedef vector<int> cell_t;
 
@@ -61,7 +47,7 @@ namespace algoExpert::dynamicProgramming {
                 auto current_value = current_item[0];
                 auto current_weight = current_item[1];
                 auto left_j = j - current_weight;
-                if (left_j < 1) {
+                if (left_j < 0) {
                     mem[i][j] = mem[i-1][j];
                 }
                 else {
