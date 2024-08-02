@@ -5,37 +5,36 @@
 
 #include <algorithm>
 #include <deque>
+#include <iostream>
+#include <limits>
 #include "MinNumberOfCoinsForChange.h"
 
 namespace algoExpert::dynamicProgramming {
-    using std::sort, std::greater, std::back_inserter, std::deque;
-
-    int change(int n, deque<int> denoms, int ncoins) {
-        if (n == 0) return ncoins;
-        if (denoms.empty()) return 0;
-        deque<int> valid_denoms;
-        std::copy_if(denoms.begin(), denoms.end(),
-                     back_inserter(valid_denoms),
-                     [&n](const int x) { return x <= n; });
-        if (valid_denoms.empty()) return -1;
-        for (auto pos = valid_denoms.begin(); pos != valid_denoms.end(); ++pos) {
-            auto n_next = change(n-*pos, valid_denoms, ncoins+1);
-            if (n_next != -1) return n_next;
-        }
-        return -1;
-    }
+    // using std::sort, std::greater, std::back_inserter, std::deque, std::numeric_limits,
+    using std::min, std::sort;
+    using std::cout, std::endl;
 
     int minNumberOfCoinsForChange(int n, vector<int> denoms) {
-        deque<int> valid_denoms;
-
-        std::copy_if(denoms.begin(), denoms.end(),
-                     back_inserter(valid_denoms),
-                     [&n](const int x) { return x <= n; });
-        if (valid_denoms.empty()) return -1;
-
-        sort(valid_denoms.begin(), valid_denoms.end(), greater<>());
-        vector<int> denom_coins;
-
-        return change(n, valid_denoms, 0);
+        if (n == 0 ) return 0;
+        sort(denoms.begin(), denoms.end());
+        vector<int> mem(n+1,-1);
+        mem[0] = 0;
+        for (const auto d: denoms) {
+            for (int i = 1; i<=n ; ++i) {
+                auto ncoins = i / d;
+                if (ncoins == 0) continue;
+                auto rem = i % d;
+                if (mem[rem] == -1) continue;
+                ncoins += mem[rem];
+                if (mem[i] == -1) {
+                    mem[i] = ncoins;
+                }
+                else {
+                    mem[i] = min(mem[i], ncoins);
+                }
+            }
+            int dummy = 42;
+        }
+        return mem[n];
     }
 }
