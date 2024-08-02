@@ -32,9 +32,9 @@ namespace algoExpert::dynamicProgramming {
             }
         }
 
-        auto cell_value = [&items](cell_t& c) {
+        auto cell_value = [&items](const cell_t& cell) {
             int v = 0;
-            for(const auto i: c) {
+            for(const auto i: cell) {
                 v += items[i][0];
             }
             return v;
@@ -42,35 +42,38 @@ namespace algoExpert::dynamicProgramming {
 
         for (int i = 2; i<=nitems ; ++i) {
             for (int j=1; j<=capacity; ++j) {
-                auto above_cell = mem[i-1][j];
-                auto current_item = items[i-1];
-                auto current_value = current_item[0];
-                auto current_weight = current_item[1];
-                auto left_j = j - current_weight;
+                auto& current_cell = mem[i][j];
+                const auto& cell_above = mem[i-1][j];
+                const auto& current_item = items[i-1];
+                const auto& current_value = current_item[0];
+                const auto& current_weight = current_item[1];
+                const auto left_j = j - current_weight;
                 if (left_j < 0) {
-                    mem[i][j] = mem[i-1][j];
+                    current_cell = cell_above;
                 }
                 else {
-                    auto left_cell = mem[i-1][left_j];
-                    auto left_cell_value = cell_value(left_cell);
-                    auto abov_cell_value = cell_value(above_cell);
-                    if (left_cell_value + current_value > abov_cell_value) {
-                        left_cell.push_back(i-1);
-                        mem[i][j] = left_cell;
+                    const auto& cell_above_left = mem[i-1][left_j];
+                    const auto above_left_value = cell_value(cell_above_left);
+                    const auto above_value = cell_value(cell_above);
+                    if ( (above_left_value + current_value) > above_value) {
+                        auto new_ij_cell = cell_above_left;
+                        // actually here we do: new_ij_cell = cell_above_left + current_cell
+                        new_ij_cell.push_back(i-1);
+                        current_cell = new_ij_cell;
                     }
                     else {
-                        mem[i][j] = mem[i-1][j];
+                        current_cell = cell_above;
                     }
                 }
             }
         }
 
-        auto indices = mem[nitems][capacity];
-        auto answ = cell_value(indices);
+        const auto& answ_indices = mem[nitems][capacity];
+        const auto answ_value = cell_value(answ_indices);
 
         return {
-        {answ},    // total value
-        indices,  // item indices
+        {answ_value},    // total value
+        answ_indices,  // item indices
       };
     }
 }
