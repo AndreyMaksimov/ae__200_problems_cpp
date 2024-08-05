@@ -55,21 +55,21 @@ namespace
 	TEST(MaxSumIncreasingSubsequence, Case08)
 	{
 		std::vector<int> array = {8, 12, 2, 3, 15, 5, 7};
-		const std::vector<std::vector<int>> expected = { 35, {8, 12, 15}};
+		const std::vector<std::vector<int>> expected = { {35}, {8, 12, 15}};
 		const auto output = algoExpert::dynamicProgramming::maxSumIncreasingSubsequence(array);
 		EXPECT_EQ(expected, output);
 	}
 	TEST(MaxSumIncreasingSubsequence, Case09)
 	{
 		std::vector<int> array = {10, 15, 4, 5, 11, 14, 31, 25, 31, 23, 25, 31, 50};
-		const std::vector<std::vector<int>> expected = { 164, {10, 11, 14, 23, 25, 31, 50}};
+		const std::vector<std::vector<int>> expected = { {164}, {10, 11, 14, 23, 25, 31, 50}};
 		const auto output = algoExpert::dynamicProgramming::maxSumIncreasingSubsequence(array);
 		EXPECT_EQ(expected, output);
 	}
 	TEST(MaxSumIncreasingSubsequence, Case10)
 	{
 		std::vector<int> array = {10, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-		const std::vector<std::vector<int>> expected = { 45, {1, 2, 3, 4, 5, 6, 7, 8, 9}};
+		const std::vector<std::vector<int>> expected = { {45}, {1, 2, 3, 4, 5, 6, 7, 8, 9}};
 		const auto output = algoExpert::dynamicProgramming::maxSumIncreasingSubsequence(array);
 		EXPECT_EQ(expected, output);
 	}
