@@ -2,8 +2,9 @@
 //
 // #DynamicProgramming
 // #Hard
+//
+// TODO: we get get some space benefit if copy pointers across the matrix. Instead of strings.
 
-#include <algorithm>
 #include "LongestCommonSubsequence.h"
 
 namespace algoExpert::dynamicProgramming {
