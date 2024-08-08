@@ -6,10 +6,10 @@ add_subdirectory(max-sum-increasing-subsequence)
 option(LongestCommonSubsequence_discover_tests "Add problem tests to a workflow" OFF)
 add_subdirectory(longest-common-subsequence)
 
-option(MinNumberOfJumps_discover_tests "Add problem tests to a workflow" ON)
+option(MinNumberOfJumps_discover_tests "Add problem tests to a workflow" OFF)
 add_subdirectory(min-number-of-jumps)
 
-option(WaterArea_discover_tests "Add problem tests to a workflow" OFF)
+option(WaterArea_discover_tests "Add problem tests to a workflow" ON)
 add_subdirectory(water-area)
 
 option(KnapsackProblem_discover_tests "Add problem tests to a workflow" OFF)
