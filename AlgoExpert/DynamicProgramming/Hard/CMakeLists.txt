@@ -15,10 +15,10 @@ add_subdirectory(water-area)
 option(KnapsackProblem_discover_tests "Add problem tests to a workflow" OFF)
 add_subdirectory(knapsack-problem)
 
-option(DiskStacking_discover_tests "Add problem tests to a workflow" ON)
+option(DiskStacking_discover_tests "Add problem tests to a workflow" OFF)
 add_subdirectory(disk-stacking)
 
-option(NumbersInPi_discover_tests "Add problem tests to a workflow" OFF)
+option(NumbersInPi_discover_tests "Add problem tests to a workflow" ON)
 add_subdirectory(numbers-in-pi)
 
 option(MaximumSumSubmatrix_discover_tests "Add problem tests to a workflow" OFF)
