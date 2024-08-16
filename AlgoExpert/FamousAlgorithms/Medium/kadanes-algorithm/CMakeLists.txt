@@ -1,0 +1,3 @@
+# AlgoExpert/FamousAlgorithms/Medium/kadanes-algorithm/CMakeLists.txt
+
+add_tests_for_problem(KadanesAlgorithm KadanesAlgorithm_discover_tests)

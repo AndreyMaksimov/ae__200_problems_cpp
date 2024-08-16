@@ -3,9 +3,9 @@ import os
 
 ALGOEXPERT_QUESTIONS_URL = 'https://www.algoexpert.io/questions/'
 ALGOEXPERT_ROOT_DIR = 'AlgoExpert'
-CATEGORY = 'DynamicProgramming'
-DIFFICULTY = 'VeryHard'
-PROBLEM_NAME = 'square-of-zeroes'
+CATEGORY = 'FamousAlgorithms'
+DIFFICULTY = 'Medium'
+PROBLEM_NAME = 'kadanes-algorithm'
 
 CMAKE_LISTS = 'CMakeLists.txt'
 DISCOVER_TESTS = '_discover_tests'
