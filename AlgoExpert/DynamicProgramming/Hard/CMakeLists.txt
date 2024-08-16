@@ -24,10 +24,10 @@ add_subdirectory(numbers-in-pi)
 option(MaximumSumSubmatrix_discover_tests "Add problem tests to a workflow" OFF)
 add_subdirectory(maximum-sum-submatrix)
 
-option(MaximizeExpression_discover_tests "Add problem tests to a workflow" ON)
+option(MaximizeExpression_discover_tests "Add problem tests to a workflow" OFF)
 add_subdirectory(maximize-expression)
 
-option(DiceThrows_discover_tests "Add problem tests to a workflow" OFF)
+option(DiceThrows_discover_tests "Add problem tests to a workflow" ON)
 add_subdirectory(dice-throws)
 
 option(JuiceBottling_discover_tests "Add problem tests to a workflow" OFF)
