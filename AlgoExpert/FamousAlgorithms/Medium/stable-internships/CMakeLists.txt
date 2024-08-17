@@ -1,0 +1,3 @@
+# AlgoExpert/FamousAlgorithms/Medium/stable-internships/CMakeLists.txt
+
+add_tests_for_problem(StableInternships StableInternships_discover_tests)
