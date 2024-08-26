@@ -5,7 +5,7 @@ ALGOEXPERT_QUESTIONS_URL = 'https://www.algoexpert.io/questions/'
 ALGOEXPERT_ROOT_DIR = 'AlgoExpert'
 CATEGORY = 'FamousAlgorithms'
 DIFFICULTY = 'Medium'
-PROBLEM_NAME = 'stable-internships'
+PROBLEM_NAME = 'union-find'
 
 CMAKE_LISTS = 'CMakeLists.txt'
 DISCOVER_TESTS = '_discover_tests'
