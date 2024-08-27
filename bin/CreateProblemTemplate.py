@@ -3,9 +3,9 @@ import os
 
 ALGOEXPERT_QUESTIONS_URL = 'https://www.algoexpert.io/questions/'
 ALGOEXPERT_ROOT_DIR = 'AlgoExpert'
-CATEGORY = 'FamousAlgorithms'
-DIFFICULTY = 'Medium'
-PROBLEM_NAME = 'union-find'
+CATEGORY = 'LinkedLists'
+DIFFICULTY = 'Easy'
+PROBLEM_NAME = 'remove-duplicates-from-linked-list'
 
 CMAKE_LISTS = 'CMakeLists.txt'
 DISCOVER_TESTS = '_discover_tests'

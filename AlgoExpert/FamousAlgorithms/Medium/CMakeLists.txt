@@ -6,5 +6,5 @@ add_subdirectory(kadanes-algorithm)
 option(StableInternships_discover_tests "Add problem tests to a workflow" OFF)
 add_subdirectory(stable-internships)
 
-option(UnionFind_discover_tests "Add problem tests to a workflow" ON)
+option(UnionFind_discover_tests "Add problem tests to a workflow" OFF)
 add_subdirectory(union-find)

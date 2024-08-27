@@ -1,0 +1,3 @@
+# AlgoExpert/LinkedLists/Easy/remove-duplicates-from-linked-list/CMakeLists.txt
+
+add_tests_for_problem(RemoveDuplicatesFromLinkedList RemoveDuplicatesFromLinkedList_discover_tests)
