@@ -31,6 +31,11 @@ function(add_tests_for_problem problem_name discover_test)
                 BinarySearchTrees
         )
     endif()
+    if(AE_LL)
+        target_link_libraries(${problem_test_exe} PUBLIC
+                LinkedList
+        )
+    endif()
 
     if (${discover_test})
         message ("===== add discover tests: " ${problem_test_exe})
