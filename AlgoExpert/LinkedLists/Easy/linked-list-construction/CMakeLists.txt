@@ -1,0 +1,3 @@
+# AlgoExpert/LinkedLists/Easy/linked-list-construction/CMakeLists.txt
+
+add_tests_for_problem(LinkedListConstruction LinkedListConstruction_discover_tests)
