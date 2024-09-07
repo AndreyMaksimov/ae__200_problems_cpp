@@ -22,10 +22,10 @@ namespace algoExpert::linkedLists {
     LinkedList* middleNode(LinkedList* linkedList) {
         auto ptr1 = linkedList;
         auto ptr2 = linkedList;
-        while (ptr2->next != nullptr) {
-            ptr1 = ptr1->next;
+        while (ptr2 != nullptr) {
             ptr2 = ptr2->next;
-            if (ptr2->next == nullptr) break;
+            if (ptr2 == nullptr) break;
+            ptr1 = ptr1->next;
             ptr2 = ptr2->next;
         }
         return ptr1;
