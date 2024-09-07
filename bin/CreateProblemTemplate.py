@@ -5,7 +5,7 @@ ALGOEXPERT_QUESTIONS_URL = 'https://www.algoexpert.io/questions/'
 ALGOEXPERT_ROOT_DIR = 'AlgoExpert'
 CATEGORY = 'LinkedLists'
 DIFFICULTY = 'Easy'
-PROBLEM_NAME = 'remove-duplicates-from-linked-list'
+PROBLEM_NAME = 'middle-node'
 
 CMAKE_LISTS = 'CMakeLists.txt'
 DISCOVER_TESTS = '_discover_tests'
