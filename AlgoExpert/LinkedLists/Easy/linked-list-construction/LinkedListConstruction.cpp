@@ -5,6 +5,8 @@
 
 #include "LinkedListConstruction.h"
 
+#include <memory>
+
 namespace algoExpert::linkedLists {
     class Node {
     public:
@@ -15,7 +17,6 @@ namespace algoExpert::linkedLists {
         Node(int value);
     };
 
-    // Feel free to add new properties and methods to the class.
     class DoublyLinkedList {
     public:
         Node* head;
@@ -47,16 +48,35 @@ namespace algoExpert::linkedLists {
         }
 
         void removeNodesWithValue(int value) {
-            // Write your code here.
+            remove(findNodeWithValue(value));
         }
 
         void remove(Node* node) {
-            // Write your code here.
+            if (node == nullptr) return;
+            if (node->next == nullptr && node->prev == nullptr) {
+                return;
+            }
+            if (node->prev != nullptr) {
+                node->prev->next = node->next;
+                node->prev = nullptr;
+            }
+            if (node->next != nullptr) {
+                node->next->prev = node->prev;
+                node->next = nullptr;
+            }
         }
 
         bool containsNodeWithValue(int value) {
             // Write your code here.
-            return false;
+            return findNodeWithValue(value) != nullptr;
+        }
+
+        Node* findNodeWithValue(const int value) const {
+            auto ptr = head;
+            while (ptr != nullptr && ptr->value != value) {
+                ptr = ptr->next;
+            }
+            return ptr;
         }
     };
 }
