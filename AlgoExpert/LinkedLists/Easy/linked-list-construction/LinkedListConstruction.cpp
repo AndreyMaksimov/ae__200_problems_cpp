@@ -103,17 +103,17 @@ namespace algoExpert::linkedLists {
         }
 
         void insertAtPosition(int position, Node* nodeToInsert) {
+            if (nodeToInsert == nullptr) return;
             cout << "insertAtPosition point 1 position = " << position << " \tvalue = " << nodeToInsert->value << endl;
             if (position < 1) return;
             if (position == 1) {
                 setHead(nodeToInsert);
                 return;
             }
-            auto ptr = findNodeAtPosition(position);
-            if (ptr != nullptr) {
-                cout << "insertAtPosition point 2 ptr->value = " << ptr->value << endl;
-                insertAfter(ptr, nodeToInsert);
-            }
+            auto ptr = findNodeAtPosition(position-1);
+            if (ptr == nullptr) return;
+            cout << "insertAtPosition point 2 ptr->value = " << ptr->value << endl;
+            insertAfter(ptr, nodeToInsert);
         }
 
         [[nodiscard]] Node* findNodeAtPosition(const int position) {
