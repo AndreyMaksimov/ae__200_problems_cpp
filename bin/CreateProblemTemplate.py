@@ -4,8 +4,8 @@ import os
 ALGOEXPERT_QUESTIONS_URL = 'https://www.algoexpert.io/questions/'
 ALGOEXPERT_ROOT_DIR = 'AlgoExpert'
 CATEGORY = 'LinkedLists'
-DIFFICULTY = 'Easy'
-PROBLEM_NAME = 'linked-list-construction'
+DIFFICULTY = 'Medium'
+PROBLEM_NAME = 'remove-kth-node-from-end'
 
 CMAKE_LISTS = 'CMakeLists.txt'
 DISCOVER_TESTS = '_discover_tests'
