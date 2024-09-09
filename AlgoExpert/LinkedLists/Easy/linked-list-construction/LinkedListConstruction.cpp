@@ -5,12 +5,7 @@
 
 #include "LinkedListConstruction.h"
 
-#include <iostream>
-#include <set>
-
 namespace algoExpert::linkedLists {
-    using std::cout, std::endl;
-
     class Node {
     public:
         int value;
@@ -33,7 +28,6 @@ namespace algoExpert::linkedLists {
         void setHead(Node* node) {
 
             if (node == nullptr) return;
-            cout << "setHead " << node->value << endl;
             if (head == nullptr) {
                 head = node;
                 tail = node;
@@ -49,7 +43,6 @@ namespace algoExpert::linkedLists {
 
         void setTail(Node* node) {
             if (node == nullptr) return;
-            cout << "setTail " << node->value << endl;
             if (tail == nullptr) {
                 tail = node;
                 head = node;
@@ -70,41 +63,29 @@ namespace algoExpert::linkedLists {
                 setHead(nodeToInsert);
                 return;
             }
-            cout << "insertBefore \tnode = " << node->value << " \tnodeToInsert = " << nodeToInsert->value << endl;
-            cout << "insertBefore nodeToInsert prev = " << nodeToInsert->prev << " \tnext = " << nodeToInsert->next << endl;
             remove(nodeToInsert);
             nodeToInsert->prev = node->prev;
             if (nodeToInsert->prev != nullptr) nodeToInsert->prev->next = nodeToInsert;
             nodeToInsert->next = node;
             node->prev = nodeToInsert;
-            cout << "insertBefore done" << endl;
         }
 
         void insertAfter(Node* node, Node* nodeToInsert) {
-            if (node == nullptr || nodeToInsert == nullptr) {
-                cout << "insertAfter point 1" << endl;
-                return;
-            }
-            if (node == nodeToInsert) {
-                cout << "insertAfter point 2" << endl;
-                return;
-            }
+            if (node == nullptr || nodeToInsert == nullptr) return;
+            if (node == nodeToInsert) return;
             if (node == tail) {
                 setTail(nodeToInsert);
                 return;
             }
-            cout << "insertAfter \tnode = " << node->value << " \tnodeToInsert = " << nodeToInsert->value << endl;
             remove(nodeToInsert);
             nodeToInsert->next = node->next;
             if (nodeToInsert->next != nullptr) nodeToInsert->next->prev = nodeToInsert;
             nodeToInsert->prev = node;
             node->next = nodeToInsert;
-            cout << "insertAfter done" << endl;
         }
 
         void insertAtPosition(int position, Node* nodeToInsert) {
             if (nodeToInsert == nullptr) return;
-            cout << "insertAtPosition point 1 position = " << position << " \tvalue = " << nodeToInsert->value << endl;
             if (position < 1) return;
             if (position == 1) {
                 setHead(nodeToInsert);
@@ -112,7 +93,6 @@ namespace algoExpert::linkedLists {
             }
             auto ptr = findNodeAtPosition(position-1);
             if (ptr == nullptr) return;
-            cout << "insertAtPosition point 2 ptr->value = " << ptr->value << endl;
             insertAfter(ptr, nodeToInsert);
         }
 
@@ -129,10 +109,8 @@ namespace algoExpert::linkedLists {
         }
 
         void removeNodesWithValue(const int value) {
-            cout << "removeNodesWithValue " << value << endl;
             auto ptr = findNodeWithValue(value);
             while (ptr != nullptr) {
-                cout << "\tremoveNodesWithValue found " << endl;
                 remove(ptr);
                 ptr = findNodeWithValue(value);
             }
@@ -146,38 +124,23 @@ namespace algoExpert::linkedLists {
                 tail = nullptr;
                 return;
             }
-            if (node->next == nullptr && node->prev == nullptr) {
-                return;
-            }
+            if (node->next == nullptr && node->prev == nullptr) return;
             if (node == head) {
-                cout << "point 1" << endl;
                 head = node->next;
                 node->next = nullptr;
                 head->prev = nullptr;
-                cout << "point 2" << endl;
                 return;
             }
             if (node == tail) {
-                cout << "point 3" << endl;
                 tail = node->prev;
                 node->prev = nullptr;
                 tail->next = nullptr;
-                cout << "point 4" << endl;
                 return;
             }
-            cout << "point 5" << endl;
-            if (node->prev != nullptr) {
-                node->prev->next = node->next;
-                // if (node->next != nullptr) node->next->prev = node->prev;
-
-            }
-            if (node->next != nullptr) {
-                node->next->prev = node->prev;
-                // if (node->prev != nullptr) node->prev->next = node->next;
-            }
+            if (node->prev != nullptr) node->prev->next = node->next;
+            if (node->next != nullptr) node->next->prev = node->prev;
             node->prev = nullptr;
             node->next = nullptr;
-            cout << "point 6" << endl;
         }
 
         [[nodiscard]] bool containsNodeWithValue(const int value) const {
