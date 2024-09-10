@@ -6,3 +6,4 @@ option(AE_LL "Add Linked List Library" ON)
 
 add_subdirectory(Easy)
 add_subdirectory(Medium)
+add_subdirectory(Hard)
