@@ -5,7 +5,7 @@ ALGOEXPERT_QUESTIONS_URL = 'https://www.algoexpert.io/questions/'
 ALGOEXPERT_ROOT_DIR = 'AlgoExpert'
 CATEGORY = 'LinkedLists'
 DIFFICULTY = 'Medium'
-PROBLEM_NAME = 'sum-of-linked-lists'
+PROBLEM_NAME = 'merging-linked-lists'
 
 CMAKE_LISTS = 'CMakeLists.txt'
 DISCOVER_TESTS = '_discover_tests'
