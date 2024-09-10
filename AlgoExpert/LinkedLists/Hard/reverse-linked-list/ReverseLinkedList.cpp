@@ -3,6 +3,7 @@
 // #LinkedLists
 // #Hard
 
+#include <iostream>
 #include "ReverseLinkedList.h"
 
 namespace algoExpert::linkedLists {
@@ -18,7 +19,15 @@ namespace algoExpert::linkedLists {
     };
 
     LinkedList* reverseLinkedList(LinkedList* head) {
-        // Write your code here.
-        return nullptr;
+        decltype(head) prev = nullptr;
+        decltype(head) curr = head;
+        decltype(head) next = nullptr;
+        while (curr) {
+            next = curr->next;
+            curr->next = prev;
+            prev = curr;
+            curr = next;
+        }
+        return prev;
     }
 }
