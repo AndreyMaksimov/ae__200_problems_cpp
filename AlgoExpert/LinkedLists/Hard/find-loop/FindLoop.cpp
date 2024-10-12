@@ -26,7 +26,7 @@ namespace algoExpert::linkedLists {
         }
         // now ptr1 is on meet point on the loop
         // ptr1 will continue run on the loop
-        ptr2 = head; // ptr2 starts from the begining again
+        ptr2 = head; // ptr2 starts from the beginning again
         // ptr1 & ptr2 should meet right at a 1-st node of the loop
         while (ptr1 != ptr2) {
             ptr1 = ptr1->next;
