@@ -4,5 +4,8 @@
 option(ReverseLinkedList_discover_tests "Add problem tests to a workflow" OFF)
 add_subdirectory(reverse-linked-list)
 
-option(FindLoop_discover_tests "Add problem tests to a workflow" ON)
+option(FindLoop_discover_tests "Add problem tests to a workflow" OFF)
 add_subdirectory(find-loop)
+
+option(MergeLinkedLists_discover_tests "Add problem tests to a workflow" ON)
+add_subdirectory(merge-linked-lists)
