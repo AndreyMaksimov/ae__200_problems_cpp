@@ -4,7 +4,7 @@ import os
 ALGOEXPERT_QUESTIONS_URL = 'https://www.algoexpert.io/questions/'
 ALGOEXPERT_ROOT_DIR = 'AlgoExpert'
 CATEGORY = 'LinkedLists'
-DIFFICULTY = 'Hard'
+DIFFICULTY = 'VeryHard'
 PROBLEM_NAME = 'shift-linked-list'
 
 CMAKE_LISTS = 'CMakeLists.txt'
