@@ -3,9 +3,9 @@ import os
 
 ALGOEXPERT_QUESTIONS_URL = 'https://www.algoexpert.io/questions/'
 ALGOEXPERT_ROOT_DIR = 'AlgoExpert'
-CATEGORY = 'LinkedLists'
-DIFFICULTY = 'VeryHard'
-PROBLEM_NAME = 'lru-cache'
+CATEGORY = 'Recursion'
+DIFFICULTY = 'Easy'
+PROBLEM_NAME = 'nth-fibonacci'
 
 CMAKE_LISTS = 'CMakeLists.txt'
 DISCOVER_TESTS = '_discover_tests'
