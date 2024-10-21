@@ -4,7 +4,7 @@ import os
 ALGOEXPERT_QUESTIONS_URL = 'https://www.algoexpert.io/questions/'
 ALGOEXPERT_ROOT_DIR = 'AlgoExpert'
 CATEGORY = 'Recursion'
-DIFFICULTY = 'Easy'
+DIFFICULTY = 'Medium'
 PROBLEM_NAME = 'product-sum'
 
 CMAKE_LISTS = 'CMakeLists.txt'
