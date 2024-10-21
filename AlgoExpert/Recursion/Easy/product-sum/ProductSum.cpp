@@ -18,12 +18,12 @@ namespace algoExpert::recursion {
     int Sum(const int deep, vector<any>& nums) {
         if (nums.empty()) return 0;
         int sum = 0;
-        for (auto it = nums.begin(); it != nums.end(); ++it) {
-            if (it->type() == typeid(int)) { // vector's element is an int
-                sum += any_cast<int>(*it);
+        for (const auto& it : nums) {
+            if (it.type() == typeid(int)) { // vector's element is an int
+                sum += any_cast<int>(it);
             }
             else { // or inner vector
-                sum += deep * Sum(deep+1, any_cast<vector<any>&>(*it));
+                sum += deep * Sum(deep+1, any_cast<vector<any>&>(it));
             }
         }
         return sum;
