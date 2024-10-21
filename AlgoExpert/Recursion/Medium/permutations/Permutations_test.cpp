@@ -1,0 +1,5 @@
+#include "Permutations.h"
+#include "gtest/gtest.h"
+
+namespace {
+}
