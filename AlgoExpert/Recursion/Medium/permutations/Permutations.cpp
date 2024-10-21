@@ -7,32 +7,26 @@
 #include <algorithm>
 #include "Permutations.h"
 
-#include <iterator>
-
 namespace algoExpert::recursion {
     using std::vector, std::copy_if;
-    void do_permutations(vector<int> v_src, vector<vector<int>>& result, vector<int> current) {
-        if (v_src.size() > 1) {
-            for(int i = 0; i < v_src.size(); i++) {
-                auto current_new = current; // fork existing vector (its head)
-                const auto a = v_src[i];
-                current_new.push_back(a);
-                vector<int> v_new;
-                copy_if(v_src.begin(), v_src.end(), back_inserter(v_new),
-                    [&v_src, &a](int item){return item != a;});
-                do_permutations(v_new, result, current_new);
+    void do_permutations(const vector<int>& v_src, const vector<int>& v_tag, vector<vector<int>>& result) {
+        for(const auto a_src : v_src) {
+            auto v_tag_new = v_tag; // fork existing tag vector (its head)
+            v_tag_new.push_back(a_src);
+            if (v_src.size() > 1) {
+                vector<int> v_src_new; // copy v_src -> v_src_new except a_src
+                copy_if(v_src.begin(), v_src.end(), back_inserter(v_src_new),
+                        [&v_src, &a_src](const int item){return item != a_src;});
+                do_permutations(v_src_new, v_tag_new, result);
+            } else {
+                result.push_back(v_tag_new);
             }
-        }
-        else {
-            current.push_back({v_src[0]});
-            result.push_back(current);
         }
     }
     vector<vector<int>> getPermutations(vector<int> array) {
         if (array.empty()) return {};
         vector<vector<int>>result;
-        vector<int> current;
-        do_permutations(array, result, current);
+        do_permutations(array, {}, result);
         return result;
     }
 }
