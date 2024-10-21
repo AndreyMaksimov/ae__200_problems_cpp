@@ -4,6 +4,7 @@
 // #Easy
 
 #include <any>
+#include <vector>
 #include "ProductSum.h"
 
 namespace algoExpert::recursion {
@@ -13,9 +14,21 @@ namespace algoExpert::recursion {
     //     any_cast<vector<any>>(element)
     // If you know an element of the array is an int you can cast it using:
     //     any_cast<int>(element)
-    using std::any;
+    using std::vector, std::any; std::any_cast;
+    int Sum(const int deep, vector<any>& nums) {
+        if (nums.empty()) return 0;
+        int sum = 0;
+        for (auto it = nums.begin(); it != nums.end(); ++it) {
+            if (it->type() == typeid(int)) { // vector's element is an int
+                sum += any_cast<int>(*it);
+            }
+            else { // or inner vector
+                sum += deep * Sum(deep+1, any_cast<vector<any>&>(*it));
+            }
+        }
+        return sum;
+    }
     int productSum(vector<any> array) {
-        // Write your code here.
-        return -1;
+        return Sum(2, array);
     }
 }
