@@ -1,0 +1,3 @@
+# AlgoExpert/Recursion/Medium/phone-number-mnemonics/CMakeLists.txt
+
+add_tests_for_problem(PhoneNumberMnemonics PhoneNumberMnemonics_discover_tests)
