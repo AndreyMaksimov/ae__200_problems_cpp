@@ -16,11 +16,11 @@ namespace algoExpert::recursion {
     //     any_cast<vector<any>>(element)
     // If you know an element of the array is an int you can cast it using:
     //     any_cast<int>(element)
-    using std::vector, std::any; std::any_cast;
+    using std::vector, std::any, std::any_cast;
     int Sum(const int deep, vector<any>& nums) {
         if (nums.empty()) return 0;
         int sum = 0;
-        for (const auto& it : nums) {
+        for (auto& it : nums) {
             if (it.type() == typeid(int)) { // vector's element is an int
                 sum += any_cast<int>(it);
             }
