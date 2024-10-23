@@ -6,4 +6,8 @@
 #include "PhoneNumberMnemonics.h"
 
 namespace algoExpert::recursion {
+    vector<string> phoneNumberMnemonics(string phoneNumber) {
+        // Write your code here.
+        return {phoneNumber};
+    }
 }
