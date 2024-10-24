@@ -1,0 +1,3 @@
+# AlgoExpert/Recursion/Medium/staircase-traversal/CMakeLists.txt
+
+add_tests_for_problem(StaircaseTraversal StaircaseTraversal_discover_tests)
