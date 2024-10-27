@@ -1,0 +1,3 @@
+# AlgoExpert/Recursion/Medium/blackjack-probability/CMakeLists.txt
+
+add_tests_for_problem(BlackjackProbability BlackjackProbability_discover_tests)
