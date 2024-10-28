@@ -6,4 +6,9 @@
 #include "RevealMinesweeper.h"
 
 namespace algoExpert::recursion {
+    vector<vector<string>> revealMinesweeper(vector<vector<string>> board, int row, int column)
+    {
+        // Write your code here.
+        return {};
+    }
 }
