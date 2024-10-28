@@ -1,0 +1,3 @@
+# AlgoExpert/Recursion/Medium/reveal-minesweeper/CMakeLists.txt
+
+add_tests_for_problem(RevealMinesweeper RevealMinesweeper_discover_tests)

@@ -13,5 +13,8 @@ add_subdirectory(phone-number-mnemonics)
 option(StaircaseTraversal_discover_tests "Add problem tests to a workflow" OFF)
 add_subdirectory(staircase-traversal)
 
-option(BlackjackProbability_discover_tests "Add problem tests to a workflow" ON)
+option(BlackjackProbability_discover_tests "Add problem tests to a workflow" OFF)
 add_subdirectory(blackjack-probability)
+
+option(RevealMinesweeper_discover_tests "Add problem tests to a workflow" ON)
+add_subdirectory(reveal-minesweeper)
