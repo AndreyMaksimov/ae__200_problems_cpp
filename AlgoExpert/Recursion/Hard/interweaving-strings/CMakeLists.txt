@@ -1,0 +1,3 @@
+# AlgoExpert/Recursion/Hard/interweaving-strings/CMakeLists.txt
+
+add_tests_for_problem(InterweavingStrings InterweavingStrings_discover_tests)
