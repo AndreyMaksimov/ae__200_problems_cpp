@@ -5,7 +5,7 @@ ALGOEXPERT_QUESTIONS_URL = 'https://www.algoexpert.io/questions/'
 ALGOEXPERT_ROOT_DIR = 'AlgoExpert'
 CATEGORY = 'Recursion'
 DIFFICULTY = 'Hard'
-PROBLEM_NAME = 'interweaving-strings'
+PROBLEM_NAME = 'solve-sudoku'
 
 CMAKE_LISTS = 'CMakeLists.txt'
 DISCOVER_TESTS = '_discover_tests'
