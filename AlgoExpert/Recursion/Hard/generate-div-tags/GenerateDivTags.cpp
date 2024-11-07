@@ -6,4 +6,8 @@
 #include "GenerateDivTags.h"
 
 namespace algoExpert::recursion {
+    vector<string> generateDivTags(int numberOfTags) {
+        // Write your code here.
+        return {};
+    }
 }
