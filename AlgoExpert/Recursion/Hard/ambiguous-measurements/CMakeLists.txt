@@ -1,0 +1,3 @@
+# AlgoExpert/Recursion/Hard/ambiguous-measurements/CMakeLists.txt
+
+add_tests_for_problem(AmbiguousMeasurements AmbiguousMeasurements_discover_tests)
