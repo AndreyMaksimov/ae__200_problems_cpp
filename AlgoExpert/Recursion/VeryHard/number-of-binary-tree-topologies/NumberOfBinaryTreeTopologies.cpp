@@ -6,4 +6,8 @@
 #include "NumberOfBinaryTreeTopologies.h"
 
 namespace algoExpert::recursion {
+    int numberOfBinaryTreeTopologies(int n) {
+        // Write your code here.
+        return -1;
+    }
 }
