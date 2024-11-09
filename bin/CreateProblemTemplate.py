@@ -5,7 +5,7 @@ ALGOEXPERT_QUESTIONS_URL = 'https://www.algoexpert.io/questions/'
 ALGOEXPERT_ROOT_DIR = 'AlgoExpert'
 CATEGORY = 'Recursion'
 DIFFICULTY = 'VeryHard'
-PROBLEM_NAME = 'ambiguous-measurements'
+PROBLEM_NAME = 'number-of-binary-tree-topologies'
 
 CMAKE_LISTS = 'CMakeLists.txt'
 DISCOVER_TESTS = '_discover_tests'
