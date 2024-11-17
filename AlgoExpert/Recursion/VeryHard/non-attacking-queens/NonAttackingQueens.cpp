@@ -6,4 +6,8 @@
 #include "NonAttackingQueens.h"
 
 namespace algoExpert::recursion {
+    int nonAttackingQueens(int n) {
+        // Write your code here.
+        return -1;
+    }
 }
