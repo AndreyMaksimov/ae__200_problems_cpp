@@ -41,7 +41,7 @@ namespace
 	TEST(RunLengthEncoding, Case06)
 	{
 		std::string str = "                          ";
-		const std::string expected = "9 9 8";
+		const std::string expected = "9 9 8 ";
 		const auto output = algoExpert::strings::runLengthEncoding(str);
 		EXPECT_EQ(expected, output);
 	}
