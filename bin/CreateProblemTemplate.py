@@ -5,7 +5,7 @@ ALGOEXPERT_QUESTIONS_URL = 'https://www.algoexpert.io/questions/'
 ALGOEXPERT_ROOT_DIR = 'AlgoExpert'
 CATEGORY = 'Strings'
 DIFFICULTY = 'Easy'
-PROBLEM_NAME = 'non-attacking-queens'
+PROBLEM_NAME = 'palindrome-check'
 
 CMAKE_LISTS = 'CMakeLists.txt'
 DISCOVER_TESTS = '_discover_tests'
