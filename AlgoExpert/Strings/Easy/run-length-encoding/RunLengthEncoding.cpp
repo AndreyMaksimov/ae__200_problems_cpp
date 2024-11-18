@@ -6,4 +6,8 @@
 #include "RunLengthEncoding.h"
 
 namespace algoExpert::strings {
+    string runLengthEncoding(string str) {
+        // Write your code here.
+        return "";
+    }
 }
