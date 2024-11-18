@@ -4,4 +4,5 @@
 
 namespace algoExpert::strings {
 	using std::vector, std::string;
+	string caesarCypherEncryptor(string str, int key);
 }
