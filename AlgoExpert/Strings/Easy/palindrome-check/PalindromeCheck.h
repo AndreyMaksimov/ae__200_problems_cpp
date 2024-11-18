@@ -4,4 +4,5 @@
 
 namespace algoExpert::strings {
 	using std::vector, std::string;
+	bool isPalindrome(string str);
 }

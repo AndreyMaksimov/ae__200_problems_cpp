@@ -6,4 +6,8 @@
 #include "PalindromeCheck.h"
 
 namespace algoExpert::strings {
+    bool isPalindrome(string str) {
+        // Write your code here.
+        return false;
+    }
 }
