@@ -9,5 +9,8 @@ add_subdirectory(caesar-cipher-encryptor)
 option(RunLengthEncoding_discover_tests "Add problem tests to a workflow" OFF)
 add_subdirectory(run-length-encoding)
 
-option(CommonCharacters_discover_tests "Add problem tests to a workflow" ON)
+option(CommonCharacters_discover_tests "Add problem tests to a workflow" OFF)
 add_subdirectory(common-characters)
+
+option(GenerateDocument_discover_tests "Add problem tests to a workflow" ON)
+add_subdirectory(generate-document)
