@@ -6,4 +6,8 @@
 #include "GenerateDocument.h"
 
 namespace algoExpert::strings {
+    bool generateDocument(string characters, string document) {
+        // Write your code here.
+        return false;
+    }
 }
