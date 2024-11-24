@@ -1,0 +1,3 @@
+# AlgoExpert/Strings/Medium/longest-palindromic-substring/CMakeLists.txt
+
+add_tests_for_problem(LongestPalindromicSubstring LongestPalindromicSubstring_discover_tests)
