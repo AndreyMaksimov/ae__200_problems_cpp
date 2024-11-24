@@ -3,11 +3,30 @@
 // #Strings
 // #Easy
 
+#include <limits>
 #include "FirstNonRepeatingCharacter.h"
 
 namespace algoExpert::strings {
+    // Complexity:
+    // O(n) time . 1 pass
+    // O(1) - space
     int firstNonRepeatingCharacter(string string) {
-        // Write your code here.
-        return -1;
+        const char a_hex_code = 0x61;
+        const int az_len = 26;
+        int az[az_len] = {0};
+
+        for (auto i = 0; i < string.length(); i++) {
+            const auto ich = string[i] - a_hex_code;
+            az[ich] = (az[ich] == 0) ? (i + 1) : std::numeric_limits<int>::max();
+        }
+        int i_result = -1;
+        int amin = std::numeric_limits<int>::max();
+        for (const int i : az) {
+            if (i < amin && i != 0) {
+                amin = i;
+                i_result = i - 1;
+            }
+        }
+        return i_result;
     }
 }
