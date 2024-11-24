@@ -6,4 +6,8 @@
 #include "LongestPalindromicSubstring.h"
 
 namespace algoExpert::strings {
+    string longestPalindromicSubstring(string str) {
+        // Write your code here.
+        return "";
+    }
 }
