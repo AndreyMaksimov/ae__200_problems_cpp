@@ -17,11 +17,12 @@ namespace algoExpert::strings {
 
         for (auto i = 0; i < string.length(); i++) {
             const auto ich = string[i] - a_hex_code;
+            // store char position or INT_MAX in case of 2+ hit
             az[ich] = (az[ich] == 0) ? (i + 1) : std::numeric_limits<int>::max();
         }
         int i_result = -1;
         int amin = std::numeric_limits<int>::max();
-        for (const int i : az) {
+        for (const int i : az) { // loop over 26 chars
             if (i < amin && i != 0) {
                 amin = i;
                 i_result = i - 1;
