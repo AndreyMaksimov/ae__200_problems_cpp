@@ -1,0 +1,3 @@
+# AlgoExpert/Strings/Easy/first-non-repeating-character/CMakeLists.txt
+
+add_tests_for_problem(FirstNonRepeatingCharacter FirstNonRepeatingCharacter_discover_tests)
