@@ -6,4 +6,8 @@
 #include "Semordnilap.h"
 
 namespace algoExpert::strings {
+    vector<vector<string>> semordnilap(vector<string> words) {
+        // Write your code here.
+        return {};
+    }
 }
