@@ -48,6 +48,7 @@ namespace algoExpert::strings {
                 }
                 else ++it;
             }
+            std::sort(group.begin(), group.end()); // comply with the test cases
             groups.push_back(group);
         }
     }
@@ -67,6 +68,11 @@ namespace algoExpert::strings {
             process_set_of_same_len_str(strings, groups);
         }
 
+        std::sort(groups.begin(), groups.end(),
+            [](const auto& a, const auto& b) {
+                if (a.size() == b.size()) return a[0] < b[0];
+                return a.size() < b.size();
+            }); // comply with the test cases
         return groups;
     }
 }
