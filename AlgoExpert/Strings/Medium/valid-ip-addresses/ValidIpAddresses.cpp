@@ -6,4 +6,8 @@
 #include "ValidIpAddresses.h"
 
 namespace algoExpert::strings {
+    vector<string> validIPAddresses(string string) {
+        // Write your code here.
+        return {};
+    }
 }
