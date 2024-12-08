@@ -25,15 +25,15 @@ namespace algoExpert::strings {
         const auto len = str.size();
         for (size_t i1 = 1; i1 <= sub_len; i1++) {
             const auto tail1 = len - i1;
-            if (tail1 > 9) continue;
-            if (tail1 < 3) break;
+            if (tail1 > 9) continue; // conditions
+            if (tail1 < 3) break;    // for 3 remain sub IP parts
             const auto start1 = 0;
             const auto str1 = str.substr(start1, i1);
             if (valid_ip_str.find(str1) == valid_ip_str.end()) continue;
             for (size_t i2 = 1; i2 <= min(sub_len, tail1); i2++) {
                 const auto tail2 = tail1 - i2;
-                if (tail2 > 6) continue;
-                if (tail2 < 2) break;
+                if (tail2 > 6) continue; // conditions
+                if (tail2 < 2) break;    // for 2 remain sub IP parts
                 const auto start2 = start1 + i1;
                 const auto str2 = str.substr(start2 , i2);
                 if (valid_ip_str.find(str2) == valid_ip_str.end()) continue;
