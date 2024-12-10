@@ -6,4 +6,8 @@
 #include "OneEdit.h"
 
 namespace algoExpert::strings {
+    bool oneEdit(string stringOne, string stringTwo) {
+        // Write your code here.
+        return false;
+    }
 }
