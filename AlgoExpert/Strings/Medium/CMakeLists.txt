@@ -13,5 +13,8 @@ add_subdirectory(valid-ip-addresses)
 option(ReverseWordsInString_discover_tests "Add problem tests to a workflow" OFF)
 add_subdirectory(reverse-words-in-string)
 
-option(MinimumCharactersForWords_discover_tests "Add problem tests to a workflow" ON)
+option(MinimumCharactersForWords_discover_tests "Add problem tests to a workflow" OFF)
 add_subdirectory(minimum-characters-for-words)
+
+option(OneEdit_discover_tests "Add problem tests to a workflow" ON)
+add_subdirectory(one-edit)
