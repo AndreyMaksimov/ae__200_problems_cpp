@@ -1,0 +1,3 @@
+# AlgoExpert/Strings/Medium/minimum-characters-for-words/CMakeLists.txt
+
+add_tests_for_problem(MinimumCharactersForWords MinimumCharactersForWords_discover_tests)
