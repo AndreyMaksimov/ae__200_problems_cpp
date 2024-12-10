@@ -7,5 +7,8 @@ add_subdirectory(longest-palindromic-substring)
 option(GroupAnagrams_discover_tests "Add problem tests to a workflow" OFF)
 add_subdirectory(group-anagrams)
 
-option(ValidIpAddresses_discover_tests "Add problem tests to a workflow" ON)
+option(ValidIpAddresses_discover_tests "Add problem tests to a workflow" OFF)
 add_subdirectory(valid-ip-addresses)
+
+option(ReverseWordsInString_discover_tests "Add problem tests to a workflow" ON)
+add_subdirectory(reverse-words-in-string)

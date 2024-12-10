@@ -5,7 +5,7 @@ ALGOEXPERT_QUESTIONS_URL = 'https://www.algoexpert.io/questions/'
 ALGOEXPERT_ROOT_DIR = 'AlgoExpert'
 CATEGORY = 'Strings'
 DIFFICULTY = 'Medium'
-PROBLEM_NAME = 'valid-ip-addresses'
+PROBLEM_NAME = 'reverse-words-in-string'
 
 CMAKE_LISTS = 'CMakeLists.txt'
 DISCOVER_TESTS = '_discover_tests'
