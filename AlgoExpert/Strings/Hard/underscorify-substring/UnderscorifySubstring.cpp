@@ -6,4 +6,8 @@
 #include "UnderscorifySubstring.h"
 
 namespace algoExpert::strings {
+    string underscorifySubstring(string str, string subStr) {
+        // Write your code here.
+        return "";
+    }
 }
