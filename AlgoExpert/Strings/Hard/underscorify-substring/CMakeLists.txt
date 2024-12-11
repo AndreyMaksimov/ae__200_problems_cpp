@@ -1,0 +1,3 @@
+# AlgoExpert/Strings/Hard/underscorify-substring/CMakeLists.txt
+
+add_tests_for_problem(UnderscorifySubstring UnderscorifySubstring_discover_tests)

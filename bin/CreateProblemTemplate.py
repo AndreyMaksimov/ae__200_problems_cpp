@@ -5,7 +5,7 @@ ALGOEXPERT_QUESTIONS_URL = 'https://www.algoexpert.io/questions/'
 ALGOEXPERT_ROOT_DIR = 'AlgoExpert'
 CATEGORY = 'Strings'
 DIFFICULTY = 'Hard'
-PROBLEM_NAME = 'longest-substring-without-duplication'
+PROBLEM_NAME = 'underscorify-substring'
 
 CMAKE_LISTS = 'CMakeLists.txt'
 DISCOVER_TESTS = '_discover_tests'
