@@ -1,0 +1,3 @@
+# AlgoExpert/Strings/Hard/longest-substring-without-duplication/CMakeLists.txt
+
+add_tests_for_problem(LongestSubstringWithoutDuplication LongestSubstringWithoutDuplication_discover_tests)
