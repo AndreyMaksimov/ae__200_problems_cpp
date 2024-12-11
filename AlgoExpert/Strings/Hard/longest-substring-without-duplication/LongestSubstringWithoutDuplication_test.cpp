@@ -80,5 +80,12 @@ namespace
 		const auto output = algoExpert::strings::longestSubstringWithoutDuplication(string);
 		EXPECT_EQ(expected, output);
 	}
+	TEST(LongestSubstringWithoutDuplication, Case12)
+	{
+		std::string string = "ababcabcd";
+		const std::string expected = "abcd";
+		const auto output = algoExpert::strings::longestSubstringWithoutDuplication(string);
+		EXPECT_EQ(expected, output);
+	}
 }
 
