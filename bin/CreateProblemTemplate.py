@@ -4,7 +4,7 @@ import os
 ALGOEXPERT_QUESTIONS_URL = 'https://www.algoexpert.io/questions/'
 ALGOEXPERT_ROOT_DIR = 'AlgoExpert'
 CATEGORY = 'Strings'
-DIFFICULTY = 'Medium'
+DIFFICULTY = 'Hard'
 PROBLEM_NAME = 'one-edit'
 
 CMAKE_LISTS = 'CMakeLists.txt'

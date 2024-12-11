@@ -16,5 +16,5 @@ add_subdirectory(reverse-words-in-string)
 option(MinimumCharactersForWords_discover_tests "Add problem tests to a workflow" OFF)
 add_subdirectory(minimum-characters-for-words)
 
-option(OneEdit_discover_tests "Add problem tests to a workflow" ON)
+option(OneEdit_discover_tests "Add problem tests to a workflow" OFF)
 add_subdirectory(one-edit)
