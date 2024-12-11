@@ -6,4 +6,8 @@
 #include "LongestSubstringWithoutDuplication.h"
 
 namespace algoExpert::strings {
+    string longestSubstringWithoutDuplication(string str) {
+        // Write your code here.
+        return "";
+    }
 }
