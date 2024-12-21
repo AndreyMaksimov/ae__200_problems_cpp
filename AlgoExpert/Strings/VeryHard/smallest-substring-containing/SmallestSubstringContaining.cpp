@@ -6,4 +6,8 @@
 #include "SmallestSubstringContaining.h"
 
 namespace algoExpert::strings {
+    string smallestSubstringContaining(string bigString, string smallString) {
+        // Write your code here.
+        return "";
+    }
 }
