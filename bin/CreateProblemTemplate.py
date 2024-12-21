@@ -5,7 +5,7 @@ ALGOEXPERT_QUESTIONS_URL = 'https://www.algoexpert.io/questions/'
 ALGOEXPERT_ROOT_DIR = 'AlgoExpert'
 CATEGORY = 'Strings'
 DIFFICULTY = 'VeryHard'
-PROBLEM_NAME = 'pattern-matcher'
+PROBLEM_NAME = 'smallest-substring-containing'
 
 CMAKE_LISTS = 'CMakeLists.txt'
 DISCOVER_TESTS = '_discover_tests'

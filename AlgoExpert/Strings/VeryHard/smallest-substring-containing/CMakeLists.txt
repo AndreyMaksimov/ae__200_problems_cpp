@@ -1,0 +1,3 @@
+# AlgoExpert/Strings/VeryHard/smallest-substring-containing/CMakeLists.txt
+
+add_tests_for_problem(SmallestSubstringContaining SmallestSubstringContaining_discover_tests)
