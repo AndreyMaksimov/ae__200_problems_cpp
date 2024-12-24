@@ -1,0 +1,3 @@
+# AlgoExpert/Strings/VeryHard/longest-balanced-substring/CMakeLists.txt
+
+add_tests_for_problem(LongestBalancedSubstring LongestBalancedSubstring_discover_tests)
