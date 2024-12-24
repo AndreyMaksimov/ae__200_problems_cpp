@@ -53,10 +53,22 @@ namespace algoExpert::strings {
         }
     }
 
+    bool removeCharFromBigMap(const char& c, char_count_t& bigMap, const char_count_t& smallMap ) {
+        const auto itBig = bigMap.find(c);
+        if (itBig == bigMap.end()) return false;
+        const auto itSmall = smallMap.find(c);
+        if (itBig->second == itSmall->second) return false; // number of 'c' in bigMap becomes less than in smallMap
+        itBig->second--;
+        return true;
+    }
+
     string smallestSubstringContaining(string bigString, string smallString) {
         char_count_t bigMap, smallMap;
         for (const auto &c : smallString) smallMap[c]++;
-        for (const auto &c : bigString) bigMap[c]++;
+        for (const auto &c : bigString) {
+            if (smallMap.find(c) == smallMap.end()) continue;
+            bigMap[c]++;
+        }
 
         // Step1: check if smallMap is a subset of bigMap
         if ( ! smallIsSubsetOfBig(smallMap, bigMap) ) return "";
@@ -68,7 +80,6 @@ namespace algoExpert::strings {
         str_idx_t idx_to_min = bigString.size() - 1;
         while (true) {
             // TODO 1) avoid double pass of intersected ranges
-            // TODO 2) update/check bigMap while we shift from left to right - it becomes smaller
             moveLeftToNextCharFromSmall(bigString, smallMap, idx_from);
             auto idx_to = idx_from;
             if (! moveRightUntilGetCompleteSmall(bigString, smallMap, idx_to)) break;
@@ -76,6 +87,7 @@ namespace algoExpert::strings {
                 idx_to_min = idx_to;
                 idx_from_min = idx_from;
             }
+            if (! removeCharFromBigMap(bigString[idx_from], bigMap, smallMap)) break; // bigMap becomes smaller than smallMap
             ++idx_from;
         }
         substr = bigString.substr(idx_from_min, idx_to_min - idx_from_min + 1);
