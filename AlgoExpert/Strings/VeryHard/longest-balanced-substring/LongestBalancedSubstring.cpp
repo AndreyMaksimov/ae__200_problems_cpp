@@ -6,4 +6,8 @@
 #include "LongestBalancedSubstring.h"
 
 namespace algoExpert::strings {
+    int longestBalancedSubstring(string str) {
+        // Write your code here.
+        return -1;
+    }
 }
