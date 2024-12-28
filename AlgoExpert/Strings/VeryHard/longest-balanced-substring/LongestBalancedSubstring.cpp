@@ -3,11 +3,41 @@
 // #Strings
 // #VeryHard
 
+#include <iostream>
 #include "LongestBalancedSubstring.h"
 
 namespace algoExpert::strings {
     using size_str_t = std::string::size_type;
+    using std::cout, std::endl;
+
+    string updateLeftToRight(string str) {
+        const auto len = str.size();
+        auto update_close_parenthesis = [&](size_str_t from_idx) {
+            while (str[from_idx] == ')') {
+                str[from_idx] = '.';
+                if (++from_idx == len) break;
+            }
+            return from_idx;
+        };
+        size_str_t i_start = 0;
+        while (i_start < len) {
+            i_start = update_close_parenthesis(i_start);
+            int balance_count = 0;
+            while (i_start < len) {
+                if (str[i_start] == '(') ++balance_count;
+                else if (str[i_start] == ')') --balance_count;
+                if (balance_count < 0) break;
+                if (++i_start == len) break;
+            }
+        }
+        cout << "LR: " << str << endl;
+        return str;
+    }
     int longestBalancedSubstring(string str) {
+        cout << "IN: " << str << endl;
+        auto str_lr = updateLeftToRight(str);
+
+
         const auto len = str.size();
         if (len < 2) return 0;
 
