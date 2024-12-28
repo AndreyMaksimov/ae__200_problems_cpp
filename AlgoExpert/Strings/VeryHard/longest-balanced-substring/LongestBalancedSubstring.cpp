@@ -41,10 +41,14 @@ namespace algoExpert::strings {
                 if (i == i_end) break;
                 ++i;
             }
-            if (balance_count == 0) // TODO: remove condition?
-            {
+            if (balance_count == 0) {
                 const auto balance_len = i - i_start + 1;
                 if (balance_len > max_balance_len) max_balance_len = balance_len;
+            }
+            else if (i == i_end) {
+                const auto balance_len = i - i_start + 1 - balance_count;
+                if (balance_len > max_balance_len) max_balance_len = balance_len;
+                break;
             }
             i_start = skip_close_parenthesis(i+1);
         }
