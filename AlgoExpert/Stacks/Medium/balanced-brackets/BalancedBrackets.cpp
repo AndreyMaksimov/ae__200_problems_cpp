@@ -6,4 +6,8 @@
 #include "BalancedBrackets.h"
 
 namespace algoExpert::stacks {
+    bool balancedBrackets(string str) {
+        // Write your code here.
+        return false;
+    }
 }
