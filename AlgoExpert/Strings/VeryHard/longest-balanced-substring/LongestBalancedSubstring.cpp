@@ -33,9 +33,33 @@ namespace algoExpert::strings {
         cout << "LR: " << str << endl;
         return str;
     }
+    using str_iter_t = string::iterator;
+    string updateLeftToRightIter(string str) {
+        const auto end = str.end();
+        auto iter = str.begin();
+        auto update_close_parenthesis = [&]() {
+            while (*iter == ')') {
+                *iter = '.';
+                if (++iter == end) break;
+            }
+            return iter;
+        };
+        while (iter != end) {
+            iter = update_close_parenthesis();
+            int balance_count = 0;
+            while (iter != end) {
+                if (*iter == '(') ++balance_count;
+                else if (*iter == ')') --balance_count;
+                if (balance_count < 0) break;
+                if (++iter == end) break;
+            }
+        }
+        cout << "LR: " << str << endl;
+        return str;
+    }
     int longestBalancedSubstring(string str) {
         cout << "IN: " << str << endl;
-        auto str_lr = updateLeftToRight(str);
+        auto str_lr = updateLeftToRightIter(str);
 
 
         const auto len = str.size();
