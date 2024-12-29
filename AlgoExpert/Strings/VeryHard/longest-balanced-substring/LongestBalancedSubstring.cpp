@@ -9,25 +9,37 @@
 namespace algoExpert::strings {
     using size_str_t = std::string::size_type;
     using std::cout, std::endl;
-
     using str_iter_t = string::iterator;
+
+    /**
+     * Replaces all unmatched parenthesis by '.'
+     * Parameters below depend on forward or reverse direction
+     * @tparam It
+     * @param begin - forward or reverse iterator
+     * @param end - forward or reverse iterator
+     * @param open_parenthesis - '(' - for forward; ')' - for reverse
+     * @param close_parenthesis - ')' - for forward; '(' - for reverse
+     */
     template <typename It>
     void pointUnmatchedParenthesis(const It& begin, const It& end, const char open_parenthesis, const char close_parenthesis) {
+        constexpr auto point_char = '.';
         auto iter = begin;
-        auto update_close_parenthesis = [&]() {
+        auto point_unpaired_close_parenthesis = [&]() {
             while (*iter == close_parenthesis) {
-                *iter = '.';
+                *iter = point_char;
                 if (++iter == end) break;
             }
-            return iter;
         };
         while (iter != end) {
-            iter = update_close_parenthesis();
+            point_unpaired_close_parenthesis();
             int balance_count = 0;
             while (iter != end) {
-                if (*iter == open_parenthesis) ++balance_count;
-                else if (*iter == close_parenthesis) --balance_count;
-                if (balance_count < 0) break;
+                if (*iter != point_char) {
+                    if (*iter == open_parenthesis) ++balance_count;
+                    else if (*iter == close_parenthesis) --balance_count;
+                    if (balance_count < 0) break;
+                }
+                else balance_count = 0;
                 if (++iter == end) break;
             }
         }
@@ -49,8 +61,8 @@ namespace algoExpert::strings {
         auto str_rl(str);
         pointUnmatchedParenthesis(str_rl, true);
         cout << "RL: " << str_rl << endl;
-
-
+        pointUnmatchedParenthesis(str_lr, true);
+        cout << "..: " << str_lr << endl;
 
         const auto len = str.size();
         if (len < 2) return 0;
