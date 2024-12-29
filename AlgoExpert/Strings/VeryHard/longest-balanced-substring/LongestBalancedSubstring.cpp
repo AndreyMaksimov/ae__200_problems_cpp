@@ -10,35 +10,12 @@ namespace algoExpert::strings {
     using size_str_t = std::string::size_type;
     using std::cout, std::endl;
 
-    string updateLeftToRight(string str) {
-        const auto len = str.size();
-        auto update_close_parenthesis = [&](size_str_t from_idx) {
-            while (str[from_idx] == ')') {
-                str[from_idx] = '.';
-                if (++from_idx == len) break;
-            }
-            return from_idx;
-        };
-        size_str_t i_start = 0;
-        while (i_start < len) {
-            i_start = update_close_parenthesis(i_start);
-            int balance_count = 0;
-            while (i_start < len) {
-                if (str[i_start] == '(') ++balance_count;
-                else if (str[i_start] == ')') --balance_count;
-                if (balance_count < 0) break;
-                if (++i_start == len) break;
-            }
-        }
-        cout << "LR: " << str << endl;
-        return str;
-    }
     using str_iter_t = string::iterator;
-    string updateLeftToRightIter(string str) {
-        const auto end = str.end();
-        auto iter = str.begin();
+    template <typename It>
+    void pointUnmatchedParenthesis(const It& begin, const It& end, const char open_parenthesis, const char close_parenthesis) {
+        auto iter = begin;
         auto update_close_parenthesis = [&]() {
-            while (*iter == ')') {
+            while (*iter == close_parenthesis) {
                 *iter = '.';
                 if (++iter == end) break;
             }
@@ -48,18 +25,31 @@ namespace algoExpert::strings {
             iter = update_close_parenthesis();
             int balance_count = 0;
             while (iter != end) {
-                if (*iter == '(') ++balance_count;
-                else if (*iter == ')') --balance_count;
+                if (*iter == open_parenthesis) ++balance_count;
+                else if (*iter == close_parenthesis) --balance_count;
                 if (balance_count < 0) break;
                 if (++iter == end) break;
             }
         }
-        cout << "LR: " << str << endl;
-        return str;
     }
+    void pointUnmatchedParenthesis(string& str, const bool reverse) {
+        if (reverse) {
+            pointUnmatchedParenthesis(str.rbegin(), str.rend(), ')', '(');
+        }
+        else {
+            pointUnmatchedParenthesis(str.begin(), str.end(), '(', ')');
+        }
+    }
+
     int longestBalancedSubstring(string str) {
         cout << "IN: " << str << endl;
-        auto str_lr = updateLeftToRightIter(str);
+        auto str_lr(str);
+        pointUnmatchedParenthesis(str_lr, false);
+        cout << "LR: " << str_lr << endl;
+        auto str_rl(str);
+        pointUnmatchedParenthesis(str_rl, true);
+        cout << "RL: " << str_rl << endl;
+
 
 
         const auto len = str.size();
