@@ -20,7 +20,7 @@ namespace algoExpert::stacks {
     {
         vector<value_max_id_t> m_stack;
     public:
-        MaxStack();
+        MaxStack() = default;
         void push(int value) {
             if (m_stack.empty()) {
                 m_stack.emplace_back(value, 0);
@@ -48,7 +48,23 @@ namespace algoExpert::stacks {
         }
     };
     string bestDigits(string number, int numDigits) {
-        // Write your code here.
-        return "";
+        if (number.empty()) return "";
+        if (numDigits < 1) return number;
+
+        // fill stack for the 1-st time
+        MaxStack max_stack;
+        for (int i = numDigits; i >= 0; --i) {
+            max_stack.push(number[i] - 0x30); // ASCII -> digit
+        }
+        string result;
+        auto num_idx = numDigits;
+        const auto len = static_cast<int>(number.size());
+        while (true) {
+            const auto c = static_cast<char>(max_stack.pop_max() + 0x30);
+            result.push_back(c);
+            if (++num_idx == len) break;
+            max_stack.push(number[num_idx] - 0x30);
+        }
+        return result;
     }
 }
