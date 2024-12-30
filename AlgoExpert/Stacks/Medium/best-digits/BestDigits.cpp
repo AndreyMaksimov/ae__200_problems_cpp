@@ -3,44 +3,25 @@
 // #Stacks
 // #Medium
 
-#include <utility>
 #include <algorithm>
+#include <deque>
 #include "BestDigits.h"
 
 namespace algoExpert::stacks {
 
-    // first - value in the current index i
-    // second - index where max value is stored (inside interval [0, i])
-    using value_max_id_t = std::pair<int, int>;
-
-    // Let's use an idea from the problem "Min Max Stack Construction"
-    // https://www.algoexpert.io/questions/min-max-stack-construction
-    // Just slightly update class properties
     class MaxStack
     {
-        vector<value_max_id_t> m_stack;
+        std::deque<int> m_stack;
     public:
         MaxStack() = default;
         void push(int value) {
-            if (m_stack.empty()) {
-                m_stack.emplace_back(value, 0);
-            }
-            else {
-                const auto& idx_with_max_value = m_stack.back().second;
-                const auto& max_value = m_stack[idx_with_max_value].first;
-                if (value >= max_value) {  // important '=>' ! (not just '>')
-                    const auto len = static_cast<int>(m_stack.size());
-                    m_stack.emplace_back(value, len);
-                }
-                else {
-                    m_stack.emplace_back(value, idx_with_max_value);
-                }
-            }
+            m_stack.emplace_back(value);
         }
         int pop_max() {
-            const auto& idx_with_max_value = m_stack.back().second;
-            const auto max_value = m_stack[idx_with_max_value].first;
-            m_stack.resize(idx_with_max_value);
+            // TODO: that is probably a weak point - full range sorting at each char shift
+            const auto it = std::max_element(m_stack.begin(), m_stack.end());
+            const auto max_value = *it;
+            m_stack.erase(m_stack.begin(), it+1);
             return max_value;
         }
         int size() const {
@@ -51,19 +32,20 @@ namespace algoExpert::stacks {
         if (number.empty()) return "";
         if (numDigits < 1) return number;
 
-        // fill stack for the 1-st time
+        // fill stack for the 1-st time. Store (numDigits+1) from "number" head
         MaxStack max_stack;
-        for (int i = numDigits; i >= 0; --i) {
+        for (int i = 0; i <= numDigits; ++i) {
             max_stack.push(number[i] - 0x30); // ASCII -> digit
         }
         string result;
         auto num_idx = numDigits;
         const auto len = static_cast<int>(number.size());
+        // loop over remain part of "number"
         while (true) {
-            const auto c = static_cast<char>(max_stack.pop_max() + 0x30);
+            const auto c = static_cast<char>(max_stack.pop_max() + 0x30); // digit -> ASCII
             result.push_back(c);
             if (++num_idx == len) break;
-            max_stack.push(number[num_idx] - 0x30);
+            max_stack.push(number[num_idx] - 0x30); // ASCII -> digit
         }
         return result;
     }
