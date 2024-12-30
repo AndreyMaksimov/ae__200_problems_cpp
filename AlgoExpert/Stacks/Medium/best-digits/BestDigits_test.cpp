@@ -7,7 +7,7 @@ namespace
 	{
 		int numDigits = 2;
 		std::string number = "462839";
-		const auto expected = 6839;
+		const auto expected = "6839";
 		const auto output = algoExpert::stacks::bestDigits(number, numDigits);
 		EXPECT_EQ(expected, output);
 	}
@@ -15,7 +15,7 @@ namespace
 	{
 		int numDigits = 4;
 		std::string number = "129847563";
-		const auto expected = 98763;
+		const auto expected = "98763";
 		const auto output = algoExpert::stacks::bestDigits(number, numDigits);
 		EXPECT_EQ(expected, output);
 	}
@@ -23,7 +23,7 @@ namespace
 	{
 		int numDigits = 1;
 		std::string number = "19";
-		const auto expected = 9;
+		const auto expected = "9";
 		const auto output = algoExpert::stacks::bestDigits(number, numDigits);
 		EXPECT_EQ(expected, output);
 	}
@@ -31,7 +31,7 @@ namespace
 	{
 		int numDigits = 1;
 		std::string number = "22";
-		const auto expected = 2;
+		const auto expected = "2";
 		const auto output = algoExpert::stacks::bestDigits(number, numDigits);
 		EXPECT_EQ(expected, output);
 	}
@@ -39,7 +39,7 @@ namespace
 	{
 		int numDigits = 1;
 		std::string number = "23";
-		const auto expected = 3;
+		const auto expected = "3";
 		const auto output = algoExpert::stacks::bestDigits(number, numDigits);
 		EXPECT_EQ(expected, output);
 	}
@@ -47,7 +47,7 @@ namespace
 	{
 		int numDigits = 1;
 		std::string number = "123";
-		const auto expected = 23;
+		const auto expected = "23";
 		const auto output = algoExpert::stacks::bestDigits(number, numDigits);
 		EXPECT_EQ(expected, output);
 	}
@@ -55,7 +55,7 @@ namespace
 	{
 		int numDigits = 1;
 		std::string number = "321";
-		const auto expected = 32;
+		const auto expected = "32";
 		const auto output = algoExpert::stacks::bestDigits(number, numDigits);
 		EXPECT_EQ(expected, output);
 	}
@@ -63,7 +63,7 @@ namespace
 	{
 		int numDigits = 2;
 		std::string number = "123";
-		const auto expected = 3;
+		const auto expected = "3";
 		const auto output = algoExpert::stacks::bestDigits(number, numDigits);
 		EXPECT_EQ(expected, output);
 	}
@@ -71,7 +71,7 @@ namespace
 	{
 		int numDigits = 2;
 		std::string number = "321";
-		const auto expected = 3;
+		const auto expected = "3";
 		const auto output = algoExpert::stacks::bestDigits(number, numDigits);
 		EXPECT_EQ(expected, output);
 	}
@@ -79,7 +79,7 @@ namespace
 	{
 		int numDigits = 10;
 		std::string number = "11111111119999999999";
-		const auto expected = 9999999999;
+		const auto expected = "9999999999";
 		const auto output = algoExpert::stacks::bestDigits(number, numDigits);
 		EXPECT_EQ(expected, output);
 	}
@@ -87,7 +87,7 @@ namespace
 	{
 		int numDigits = 9;
 		std::string number = "10000000002";
-		const auto expected = 12;
+		const auto expected = "12";
 		const auto output = algoExpert::stacks::bestDigits(number, numDigits);
 		EXPECT_EQ(expected, output);
 	}
@@ -95,7 +95,7 @@ namespace
 	{
 		int numDigits = 10;
 		std::string number = "10000000002";
-		const auto expected = 2;
+		const auto expected = "2";
 		const auto output = algoExpert::stacks::bestDigits(number, numDigits);
 		EXPECT_EQ(expected, output);
 	}
@@ -103,7 +103,7 @@ namespace
 	{
 		int numDigits = 5;
 		std::string number = "1020304050";
-		const auto expected = 34050;
+		const auto expected = "34050";
 		const auto output = algoExpert::stacks::bestDigits(number, numDigits);
 		EXPECT_EQ(expected, output);
 	}
@@ -111,7 +111,7 @@ namespace
 	{
 		int numDigits = 4;
 		std::string number = "100300200004";
-		const auto expected = 30200004;
+		const auto expected = "30200004";
 		const auto output = algoExpert::stacks::bestDigits(number, numDigits);
 		EXPECT_EQ(expected, output);
 	}
@@ -119,7 +119,7 @@ namespace
 	{
 		int numDigits = 9;
 		std::string number = "9999999999";
-		const auto expected = 9;
+		const auto expected = "9";
 		const auto output = algoExpert::stacks::bestDigits(number, numDigits);
 		EXPECT_EQ(expected, output);
 	}
@@ -127,7 +127,7 @@ namespace
 	{
 		int numDigits = 3;
 		std::string number = "111221";
-		const auto expected = 221;
+		const auto expected = "221";
 		const auto output = algoExpert::stacks::bestDigits(number, numDigits);
 		EXPECT_EQ(expected, output);
 	}
@@ -135,7 +135,7 @@ namespace
 	{
 		int numDigits = 0;
 		std::string number = "12345";
-		const auto expected = 12345;
+		const auto expected = "12345";
 		const auto output = algoExpert::stacks::bestDigits(number, numDigits);
 		EXPECT_EQ(expected, output);
 	}
@@ -143,7 +143,7 @@ namespace
 	{
 		int numDigits = 0;
 		std::string number = "54321";
-		const auto expected = 54321;
+		const auto expected = "54321";
 		const auto output = algoExpert::stacks::bestDigits(number, numDigits);
 		EXPECT_EQ(expected, output);
 	}
