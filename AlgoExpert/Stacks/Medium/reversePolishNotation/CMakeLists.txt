@@ -1,0 +1,3 @@
+# AlgoExpert/Stacks/Medium/reversePolishNotation/CMakeLists.txt
+
+add_tests_for_problem(ReversePolishNotation ReversePolishNotation_discover_tests)
