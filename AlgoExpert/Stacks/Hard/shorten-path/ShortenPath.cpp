@@ -6,4 +6,8 @@
 #include "ShortenPath.h"
 
 namespace algoExpert::stacks {
+    string shortenPath(string path) {
+        // Write your code here.
+        return "";
+    }
 }

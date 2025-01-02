@@ -4,4 +4,5 @@
 
 namespace algoExpert::stacks {
 	using std::vector, std::string;
+	string shortenPath(string path);
 }
