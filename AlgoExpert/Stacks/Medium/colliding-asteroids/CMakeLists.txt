@@ -1,0 +1,3 @@
+# AlgoExpert/Stacks/Medium/colliding-asteroids/CMakeLists.txt
+
+add_tests_for_problem(CollidingAsteroids CollidingAsteroids_discover_tests)
