@@ -5,7 +5,7 @@ ALGOEXPERT_QUESTIONS_URL = 'https://www.algoexpert.io/questions/'
 ALGOEXPERT_ROOT_DIR = 'AlgoExpert'
 CATEGORY = 'Stacks'
 DIFFICULTY = 'Hard'
-PROBLEM_NAME = 'colliding-asteroids'
+PROBLEM_NAME = 'shorten-path'
 
 CMAKE_LISTS = 'CMakeLists.txt'
 DISCOVER_TESTS = '_discover_tests'
