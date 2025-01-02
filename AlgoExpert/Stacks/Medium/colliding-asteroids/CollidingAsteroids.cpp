@@ -11,7 +11,7 @@ namespace algoExpert::stacks {
     vector<int> collidingAsteroids(vector<int> asteroids) {
         if (asteroids.size() < 2) return asteroids;
         vector<int> result; // will be used as a stack (methods back(), push_back(), pop_back()
-        for (const int& asteroid : asteroids) {
+        for (const auto& asteroid : asteroids) {
             bool it_destroyed = false;
             while (!result.empty()) {
                 if (signbit(asteroid) == signbit(result.back()) || !signbit(asteroid)) break;
