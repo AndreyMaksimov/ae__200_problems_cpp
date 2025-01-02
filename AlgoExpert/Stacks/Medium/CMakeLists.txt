@@ -22,5 +22,5 @@ add_subdirectory(next-greater-element)
 option(ReversePolishNotation_discover_tests "Add problem tests to a workflow" OFF)
 add_subdirectory(reversePolishNotation)
 
-option(CollidingAsteroids_discover_tests "Add problem tests to a workflow" ON)
+option(CollidingAsteroids_discover_tests "Add problem tests to a workflow" OFF)
 add_subdirectory(colliding-asteroids)
