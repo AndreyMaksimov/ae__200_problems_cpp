@@ -4,4 +4,5 @@
 
 namespace algoExpert::stacks {
 	using std::vector, std::string;
+	vector<int> collidingAsteroids(vector<int> asteroids);
 }
