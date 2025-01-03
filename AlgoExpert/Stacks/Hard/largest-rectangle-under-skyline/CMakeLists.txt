@@ -1,0 +1,3 @@
+# AlgoExpert/Stacks/Hard/largest-rectangle-under-skyline/CMakeLists.txt
+
+add_tests_for_problem(LargestRectangleUnderSkyline LargestRectangleUnderSkyline_discover_tests)
