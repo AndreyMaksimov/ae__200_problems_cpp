@@ -5,7 +5,7 @@ ALGOEXPERT_QUESTIONS_URL = 'https://www.algoexpert.io/questions/'
 ALGOEXPERT_ROOT_DIR = 'AlgoExpert'
 CATEGORY = 'Stacks'
 DIFFICULTY = 'VeryHard'
-PROBLEM_NAME = 'largest-rectangle-under-skyline'
+PROBLEM_NAME = 'largest-park'
 
 CMAKE_LISTS = 'CMakeLists.txt'
 DISCOVER_TESTS = '_discover_tests'
