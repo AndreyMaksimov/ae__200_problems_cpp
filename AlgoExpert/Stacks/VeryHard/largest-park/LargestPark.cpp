@@ -6,4 +6,8 @@
 #include "LargestPark.h"
 
 namespace algoExpert::stacks {
+    int largestPark(vector<vector<bool>> land) {
+        // Write your code here.
+        return -1;
+    }
 }
