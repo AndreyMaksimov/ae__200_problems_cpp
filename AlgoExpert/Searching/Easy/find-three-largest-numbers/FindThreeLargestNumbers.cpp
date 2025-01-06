@@ -6,4 +6,8 @@
 #include "FindThreeLargestNumbers.h"
 
 namespace algoExpert::searching {
+    vector<int> findThreeLargestNumbers(vector<int> array) {
+        // Write your code here.
+        return {};
+    }
 }
