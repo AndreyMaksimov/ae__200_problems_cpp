@@ -3,8 +3,8 @@ import os
 
 ALGOEXPERT_QUESTIONS_URL = 'https://www.algoexpert.io/questions/'
 ALGOEXPERT_ROOT_DIR = 'AlgoExpert'
-CATEGORY = 'Stacks'
-DIFFICULTY = 'VeryHard'
+CATEGORY = 'Searching'
+DIFFICULTY = 'Easy'
 PROBLEM_NAME = 'largest-park'
 
 CMAKE_LISTS = 'CMakeLists.txt'
