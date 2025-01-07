@@ -34,3 +34,9 @@ Some notes:
 *   By categories:
 
 <table><tbody><tr><td><strong>Category</strong></td><td><strong>Solved/Total</strong></td></tr><tr><td><a href="AlgoExpert/Arrays/">Arrays</a></td><td>27 / 33</td></tr><tr><td>Binary Search Trees</td><td>9 / 12</td></tr><tr><td>Binary Trees</td><td>0 / 17</td></tr></tbody></table>
+
+<table><tbody><tr><td><strong>Category</strong></td><td><strong>Solved/Total</strong></td><td>&nbsp;</td><td><strong>Category</strong></td><td><strong>Solved/Total</strong></td></tr><tr><td>Arrays</td><td>27 / 33</td><td>&nbsp;</td><td>Binary Search Trees</td><td>9 / 12</td></tr><tr><td>Binary Trees</td><td>0 / 17</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table>
+
+and
+
+<table><tbody><tr><td style="border-left:2px solid #000000;border-top:2px solid #000000;"><strong>Category</strong></td><td style="border-right:2px solid #000000;border-top:2px solid #000000;"><strong>Solved/Total</strong></td><td>&nbsp;</td><td style="border-left:2px solid #000000;border-top:2px solid #000000;"><strong>Category</strong></td><td style="border-right:2px solid #000000;border-top:2px solid #000000;"><strong>Solved/Total</strong></td></tr><tr><td style="border-left:2px solid #000000;">Arrays</td><td style="border-right:2px solid #000000;">27 / 33</td><td>&nbsp;</td><td style="border-left:2px solid #000000;">Binary Search Trees</td><td style="border-right:2px solid #000000;">9 / 12</td></tr><tr><td style="border-bottom:2px solid #000000;border-left:2px solid #000000;">Binary Trees</td><td style="border-bottom:2px solid #000000;border-right:2px solid #000000;">0 / 17</td><td>&nbsp;</td><td style="border-bottom:2px solid #000000;border-left:2px solid #000000;">&nbsp;</td><td style="border-bottom:2px solid #000000;border-right:2px solid #000000;">&nbsp;</td></tr></tbody></table>
