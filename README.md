@@ -33,4 +33,4 @@ Some notes:
 *   102 Questions Completed out of 200
 *   By categories:
 
-<table><tbody><tr><td><strong>Category</strong></td><td><strong>Solved/Total</strong></td></tr><tr><td><a href="Arrays/">Arrays</a></td><td>27 / 33</td></tr><tr><td>Binary Search Trees</td><td>9 / 12</td></tr><tr><td>Binary Trees</td><td>0 / 17</td></tr></tbody></table>
+<table><tbody><tr><td><strong>Category</strong></td><td><strong>Solved/Total</strong></td></tr><tr><td><a href="AlgoExpert/Arrays/">Arrays</a></td><td>27 / 33</td></tr><tr><td>Binary Search Trees</td><td>9 / 12</td></tr><tr><td>Binary Trees</td><td>0 / 17</td></tr></tbody></table>
