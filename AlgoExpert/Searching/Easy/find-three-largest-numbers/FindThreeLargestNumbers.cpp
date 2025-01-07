@@ -7,7 +7,6 @@
 #include "FindThreeLargestNumbers.h"
 
 namespace algoExpert::searching {
-    using a_count_t = std::pair<int, int>;
     vector<int> findThreeLargestNumbers(vector<int> array) {
         constexpr auto a_min = std::numeric_limits<int>::min();
         auto a1 = a_min, a2 = a_min, a3 = a_min;
