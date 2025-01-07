@@ -3,11 +3,28 @@
 // #Searching
 // #Easy
 
+#include <limits>
 #include "FindThreeLargestNumbers.h"
 
 namespace algoExpert::searching {
+    using a_count_t = std::pair<int, int>;
     vector<int> findThreeLargestNumbers(vector<int> array) {
-        // Write your code here.
-        return {};
+        constexpr auto a_min = std::numeric_limits<int>::min();
+        auto a1 = a_min, a2 = a_min, a3 = a_min;
+        for (const auto& a : array) {
+            if (a1 <= a) {
+                a3 = a2;
+                a2 = a1;
+                a1 = a;
+            }
+            if (a < a1 && a2 <= a) {
+                a3 = a2;
+                a2 = a;
+            }
+            if (a < a2 && a3 <= a) {
+                a3 = a;
+            }
+        }
+        return {a3, a2, a1};
     }
 }
