@@ -183,7 +183,7 @@ Some notes:
                 13
             </td>
             <td>
-                <a href="http://Algoexpert/Stacks">Stacks</a>
+                <a href="Algoexpert/Stacks">Stacks</a>
             </td>
             <td>
                 10 / 11
