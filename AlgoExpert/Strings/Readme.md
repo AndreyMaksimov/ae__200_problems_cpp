@@ -37,8 +37,51 @@
             </td>
         </tr>
         <tr>
+                &nbsp;
+        </tr>
+        <tr>
             <td style="text-align:right;">
                 2
+            </td>
+            <td>
+                :large_blue_circle:
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+                &nbsp;
+        </tr>
+        <tr>
+            <td style="text-align:right;">
+                3
+            </td>
+            <td>
+                :red_circle:
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+                &nbsp;
+        </tr>
+        <tr>
+            <td style="text-align:right;">
+                4
             </td>
             <td>
                 :black_circle:
@@ -53,5 +96,6 @@
                 &nbsp;
             </td>
         </tr>
+
     </tbody>
 </table>
