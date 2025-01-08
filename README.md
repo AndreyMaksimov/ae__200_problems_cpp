@@ -194,7 +194,7 @@ Some notes:
                 14
             </td>
             <td>
-                Strings
+                <a href="AlgoExpert/Strings/">Strings</a>
             </td>
             <td>
                 18 / 18
