@@ -27,13 +27,13 @@
                 :green_circle:
             </td>
             <td>
-                Palindrome Check
+                <a href="Easy/palindrome-check/">Palindrome Check</a>
             </td>
             <td>
-                &nbsp;
+                :heavy_plus_sign:
             </td>
             <td>
-                &nbsp;
+                :white_check_mark:
             </td>
         </tr>
         <tr>
