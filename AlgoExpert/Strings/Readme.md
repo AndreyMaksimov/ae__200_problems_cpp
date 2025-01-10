@@ -248,19 +248,53 @@
         </tr>
         <tr>
             <td style="text-align:right;">
-                3
+                14
             </td>
             <td>
                 :red_circle:
             </td>
             <td>
-                &nbsp;
+                <a href="Hard/longest-substring-without-duplication/">Longest Substring Without Duplication</a>
             </td>
             <td>
-                &nbsp;
+                :heavy_plus_sign:
             </td>
             <td>
-                &nbsp;
+                :white_check_mark:
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:right;">
+                15
+            </td>
+            <td>
+                :red_circle:
+            </td>
+            <td>
+                <a href="Hard/underscorify-substring/">Underscorify Substring</a>
+            </td>
+            <td>
+                :heavy_plus_sign:
+            </td>
+            <td>
+                :white_check_mark:
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:right;">
+                16
+            </td>
+            <td>
+                :red_circle:
+            </td>
+            <td>
+                <a href="Hard/pattern-matcher/">Pattern Matcher</a>
+            </td>
+            <td>
+                :heavy_plus_sign:
+            </td>
+            <td>
+                :white_check_mark:
             </td>
         </tr>
         <tr>
