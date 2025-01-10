@@ -143,19 +143,104 @@
         </tr>
         <tr>
             <td style="text-align:right;">
-                2
+                8
             </td>
             <td>
                 :large_blue_circle:
             </td>
             <td>
-                &nbsp;
+                <a href="Medium/longest-palindromic-substring/">Longest Palindromic Substring</a>
             </td>
             <td>
-                &nbsp;
+                :heavy_plus_sign:
             </td>
             <td>
-                &nbsp;
+                :white_check_mark:
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:right;">
+                9
+            </td>
+            <td>
+                :large_blue_circle:
+            </td>
+            <td>
+                <a href="Medium/group-anagrams/">Group Anagrams</a>
+            </td>
+            <td>
+                :heavy_plus_sign:
+            </td>
+            <td>
+                :white_check_mark:
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:right;">
+                10
+            </td>
+            <td>
+                :large_blue_circle:
+            </td>
+            <td>
+                <a href="Medium/valid-ip-addresses/">Valid IP Addresses</a>
+            </td>
+            <td>
+                :heavy_plus_sign:
+            </td>
+            <td>
+                :white_check_mark:
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:right;">
+                11
+            </td>
+            <td>
+                :large_blue_circle:
+            </td>
+            <td>
+                <a href="Medium/reverse-words-in-string/">Reverse Words In String</a>
+            </td>
+            <td>
+                :heavy_plus_sign:
+            </td>
+            <td>
+                :white_check_mark:
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:right;">
+                12
+            </td>
+            <td>
+                :large_blue_circle:
+            </td>
+            <td>
+                <a href="Medium/minimum-characters-for-words/">Minimum Characters For Words</a>
+            </td>
+            <td>
+                :heavy_plus_sign:
+            </td>
+            <td>
+                :white_check_mark:
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:right;">
+                13
+            </td>
+            <td>
+                :large_blue_circle:
+            </td>
+            <td>
+                <a href="Medium/one-edit/">One Edit</a>
+            </td>
+            <td>
+                :heavy_plus_sign:
+            </td>
+            <td>
+                :white_check_mark:
             </td>
         </tr>
         <tr>
