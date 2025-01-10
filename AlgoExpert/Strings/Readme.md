@@ -302,19 +302,36 @@
         </tr>
         <tr>
             <td style="text-align:right;">
-                4
+                17
             </td>
             <td>
                 :black_circle:
             </td>
             <td>
-                &nbsp;
+                <a href="VeryHard/smallest-substring-containing/">Smallest Substring Containing</a>
             </td>
             <td>
-                &nbsp;
+                :heavy_plus_sign:
             </td>
             <td>
-                &nbsp;
+                :white_check_mark:
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:right;">
+                18
+            </td>
+            <td>
+                :black_circle:
+            </td>
+            <td>
+                <a href="VeryHard/longest-balanced-substring/">Longest Balanced Substring</a>
+            </td>
+            <td>
+                :heavy_plus_sign:
+            </td>
+            <td>
+                :white_check_mark:
             </td>
         </tr>
     </tbody>
