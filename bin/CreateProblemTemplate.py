@@ -5,7 +5,7 @@ ALGOEXPERT_QUESTIONS_URL = 'https://www.algoexpert.io/questions/'
 ALGOEXPERT_ROOT_DIR = 'AlgoExpert'
 CATEGORY = 'Searching'
 DIFFICULTY = 'Medium'
-PROBLEM_NAME = 'find-three-largest-numbers'
+PROBLEM_NAME = 'search-in-sorted-matrix'
 
 CMAKE_LISTS = 'CMakeLists.txt'
 DISCOVER_TESTS = '_discover_tests'
