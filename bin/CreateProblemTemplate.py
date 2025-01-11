@@ -4,7 +4,7 @@ import os
 ALGOEXPERT_QUESTIONS_URL = 'https://www.algoexpert.io/questions/'
 ALGOEXPERT_ROOT_DIR = 'AlgoExpert'
 CATEGORY = 'Searching'
-DIFFICULTY = 'Easy'
+DIFFICULTY = 'Medium'
 PROBLEM_NAME = 'find-three-largest-numbers'
 
 CMAKE_LISTS = 'CMakeLists.txt'
