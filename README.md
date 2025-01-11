@@ -161,7 +161,7 @@ Some notes:
                 11
             </td>
             <td>
-                Searching
+                <a href="AlgoExpert/Searching/">Searching</a>
             </td>
             <td>
                 2 / 9
