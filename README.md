@@ -1,6 +1,6 @@
 ## algoexpert-cpp
 
-Solving [algoexpert](https://www.algoexpert.io/questions) problems in C++.
+Solving [algoexpert](https://www.algoexpert.io/questions) problems in C++. [My certificate](https://certificate.algoexpert.io/AE-c8dba87ec3)
 
 Some notes:
 
