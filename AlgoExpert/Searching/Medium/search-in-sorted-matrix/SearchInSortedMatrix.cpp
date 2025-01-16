@@ -5,11 +5,13 @@
 
 #include <algorithm>
 #include <utility>
+#include <iostream>
 #include "SearchInSortedMatrix.h"
 
 namespace algoExpert::searching {
     using std::min;
     using std::pair;
+    using std::cout, std::endl;
 
     using point_t = pair<int, int>;
     using rect_t = pair<int, int>;
@@ -27,7 +29,6 @@ namespace algoExpert::searching {
         SubRect(const SubRect&) = default;
         explicit SubRect(const vector<vector<int>>& matrix):
         _matrix(matrix),
-        // _topLeft(0, 0),
         _size(matrix[0].size(), matrix.size())
         {}
 
@@ -53,27 +54,40 @@ namespace algoExpert::searching {
             return _size.first == 1;
         }
         [[nodiscard]] vector<int> top_left_corner() const {
-            return {_topLeft.first, _topLeft.second};
+            return {_topLeft.second, _topLeft.first};
         }
         using two_rects_t = std::pair<SubRect, SubRect>;
         [[nodiscard]] two_rects_t createByX() const {
-            auto one_r = SubRect(this->_matrix);
+            auto one_r = SubRect(*this);
             one_r._size.first = _size.first / 2;
-            auto two_r = SubRect(this->_matrix);
+            auto two_r = SubRect(*this);
             two_r._size.first = _size.first - one_r._size.first;
             two_r._topLeft.first = _topLeft.first + one_r._size.first;
             return {one_r, two_r};
         }
         [[nodiscard]] two_rects_t createByY() const {
-            auto one_r = SubRect(this->_matrix);
+            auto one_r = SubRect(*this);
             one_r._size.second = _size.second / 2;
-            auto two_r = SubRect(this->_matrix);
+            auto two_r = SubRect(*this);
             two_r._size.second = _size.second - one_r._size.second;
             two_r._topLeft.second = _topLeft.second + one_r._size.second;
             return {one_r, two_r};
         }
+        static int count_print;
+        static void print_rect(const char* title, const bool bY, const SubRect& rect, const int level) {
+            const char* XY = bY ? "Y" : "X";
+            cout << "[" << title << "]: " << XY << "  " << level;
+            cout << "  top_left = ( " << rect._topLeft.first << ", " << rect._topLeft.second << " ) ";
+            cout << "size = ( " << rect._size.first << ", " << rect._size.second << " ) ";
+            cout << endl;
+            // if (++count_print >= 10) throw 1;
+        }
     };
-    bool search_helper(const SubRect& sr, const int& target, const bool divideByY, vector<int>& r) {
+
+    int SubRect::count_print = 0;
+
+    bool search_helper(const SubRect sr, const int& target, const bool divideByY, vector<int>& r, int level) {
+        SubRect::print_rect("search_helper", divideByY, sr, level);
         if (r != no_result)          return true;
         if (!sr.may_contain(target)) return false;
         if (sr.is_one_cell()) {
@@ -86,18 +100,18 @@ namespace algoExpert::searching {
 
         if (sr.is_one_row()) {
             const auto two_sr = sr.createByX();
-            if (search_helper(two_sr.first, target, false, r)) return true;
-            if (search_helper(two_sr.second, target, false, r)) return true;
+            if (search_helper(two_sr.first, target, false, r, (level+1))) return true;
+            if (search_helper(two_sr.second, target, false, r, (level+1))) return true;
         }
         else if (sr.is_one_column()) {
             const auto two_sr = sr.createByY();
-            if (search_helper(two_sr.first, target, true, r)) return true;
-            if (search_helper(two_sr.second, target, true, r)) return true;
+            if (search_helper(two_sr.first, target, true, r, (level+1))) return true;
+            if (search_helper(two_sr.second, target, true, r, (level+1))) return true;
         }
         else {
             const auto two_sr = divideByY ? sr.createByY() : sr.createByX();
-            if (search_helper(two_sr.first, target, !divideByY, r)) return true;
-            if (search_helper(two_sr.second, target, !divideByY, r)) return true;
+            if (search_helper(two_sr.first, target, !divideByY, r, (level+1))) return true;
+            if (search_helper(two_sr.second, target, !divideByY, r, (level+1))) return true;
         }
         return false;
     }
@@ -110,7 +124,7 @@ namespace algoExpert::searching {
         }
 
         SubRect main_matrix(matrix);
-        search_helper(main_matrix, target, true, result);
+        search_helper(main_matrix, target, true, result, 1);
 
         return result;
     }
