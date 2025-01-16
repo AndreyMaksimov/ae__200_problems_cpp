@@ -18,9 +18,8 @@ namespace algoExpert::searching {
     class SubRect
     {
         const vector<vector<int>>& _matrix;
-        point_t _topLeft;
         rect_t _size;
-        rect_t _shift_to_main;
+        point_t _topLeft;
 
     public:
         SubRect() = delete;
@@ -28,12 +27,12 @@ namespace algoExpert::searching {
         SubRect(const SubRect&) = default;
         explicit SubRect(const vector<vector<int>>& matrix):
         _matrix(matrix),
-        _topLeft(0, 0),
+        // _topLeft(0, 0),
         _size(matrix[0].size(), matrix.size())
         {}
 
         [[nodiscard]] int valueAt(const int x, const int y) const {
-            return _matrix[y + _shift_to_main.second][x + _shift_to_main.first];
+            return _matrix[y + _topLeft.second][x + _topLeft.first];
         }
         [[nodiscard]] int minValue() const {
             return valueAt(0, 0);
@@ -54,22 +53,36 @@ namespace algoExpert::searching {
             return _size.first == 1;
         }
         [[nodiscard]] vector<int> top_left_corner() const {
-            return {_shift_to_main.first, _shift_to_main.second};
+            return {_topLeft.first, _topLeft.second};
         }
-        using two_rects_t = std::pair<SubRect&, SubRect&>;
+        using two_rects_t = std::pair<SubRect, SubRect>;
         [[nodiscard]] two_rects_t createByX() const {
             auto one_r = SubRect(this->_matrix);
+            one_r._size.first = _size.first / 2;
             auto two_r = SubRect(this->_matrix);
+            two_r._size.first = _size.first - one_r._size.first;
+            two_r._topLeft.first = _topLeft.first + one_r._size.first;
             return {one_r, two_r};
         }
         [[nodiscard]] two_rects_t createByY() const {
-            return {*this, *this};
+            auto one_r = SubRect(this->_matrix);
+            one_r._size.second = _size.second / 2;
+            auto two_r = SubRect(this->_matrix);
+            two_r._size.second = _size.second - one_r._size.second;
+            two_r._topLeft.second = _topLeft.second + one_r._size.second;
+            return {one_r, two_r};
         }
     };
     bool search_helper(const SubRect& sr, const int& target, const bool divideByY, vector<int>& r) {
         if (r != no_result)          return true;
         if (!sr.may_contain(target)) return false;
-        if (sr.is_one_cell())        return (sr.valueAt(0, 0) == target);
+        if (sr.is_one_cell()) {
+            if (sr.valueAt(0, 0) == target) {
+                r = sr.top_left_corner();
+                return true;
+            }
+            return false;
+        }
 
         if (sr.is_one_row()) {
             const auto two_sr = sr.createByX();
