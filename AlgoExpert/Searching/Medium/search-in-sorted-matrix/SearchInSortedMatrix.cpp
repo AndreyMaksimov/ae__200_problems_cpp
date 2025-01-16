@@ -25,6 +25,7 @@ namespace algoExpert::searching {
     public:
         SubRect() = delete;
         ~SubRect() = default;
+        SubRect(const SubRect&) = default;
         explicit SubRect(const vector<vector<int>>& matrix):
         _matrix(matrix),
         _topLeft(0, 0),
@@ -55,21 +56,21 @@ namespace algoExpert::searching {
         [[nodiscard]] vector<int> top_left_corner() const {
             return {_shift_to_main.first, _shift_to_main.second};
         }
-        using two_rects_t = std::pair<SubRect, SubRect>;
+        using two_rects_t = std::pair<SubRect&, SubRect&>;
         [[nodiscard]] two_rects_t createByX() const {
-            return {*this, *this};
+            auto one_r = SubRect(this->_matrix);
+            auto two_r = SubRect(this->_matrix);
+            return {one_r, two_r};
         }
         [[nodiscard]] two_rects_t createByY() const {
             return {*this, *this};
         }
     };
-    bool search_helper(const SubRect sr, const int& target, const bool divide_rect_Ydirection, vector<int>& r) {
-        if (r != no_result) return true;
+    bool search_helper(const SubRect& sr, const int& target, const bool divideByY, vector<int>& r) {
+        if (r != no_result)          return true;
         if (!sr.may_contain(target)) return false;
-        if (sr.is_one_cell()) {
-            if (sr.valueAt(0, 0) == target) r = sr.top_left_corner();
-            return true;
-        }
+        if (sr.is_one_cell())        return (sr.valueAt(0, 0) == target);
+
         if (sr.is_one_row()) {
             const auto two_sr = sr.createByX();
             if (search_helper(two_sr.first, target, false, r)) return true;
@@ -81,9 +82,9 @@ namespace algoExpert::searching {
             if (search_helper(two_sr.second, target, true, r)) return true;
         }
         else {
-            const auto two_sr = divide_rect_Ydirection ? sr.createByY() : sr.createByX();
-            if (search_helper(two_sr.first, target, !divide_rect_Ydirection, r)) return true;
-            if (search_helper(two_sr.second, target, !divide_rect_Ydirection, r)) return true;
+            const auto two_sr = divideByY ? sr.createByY() : sr.createByX();
+            if (search_helper(two_sr.first, target, !divideByY, r)) return true;
+            if (search_helper(two_sr.second, target, !divideByY, r)) return true;
         }
         return false;
     }
