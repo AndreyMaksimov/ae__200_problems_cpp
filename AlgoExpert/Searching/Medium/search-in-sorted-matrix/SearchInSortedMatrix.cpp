@@ -3,9 +3,12 @@
 // #Searching
 // #Medium
 
-#include <algorithm>
 #include <utility>
 #include "SearchInSortedMatrix.h"
+
+// The idea is sequentially divide matrix recursively in Y and X directions.
+// Check on each step if a target is inside new rectangle (between top left & right bottom values)
+// Does it work with complexity O(log(M+N)) ? Because no guarantee that we half reducing amount of data on each step
 
 namespace algoExpert::searching {
     using std::min;
@@ -13,7 +16,7 @@ namespace algoExpert::searching {
 
     using point_t = pair<int, int>;
     using rect_t = pair<int, int>;
-    static const vector<int> no_result{-1, -1};
+    static const vector no_result{-1, -1};
 
     class SubRect
     {
@@ -55,7 +58,7 @@ namespace algoExpert::searching {
             return {_topLeft.second, _topLeft.first};
         }
         using two_rects_t = std::pair<SubRect, SubRect>;
-        [[nodiscard]] two_rects_t createByX() const {
+        [[nodiscard]] two_rects_t divideInXaxis() const {
             auto one_r = SubRect(*this);
             one_r._size.first = _size.first / 2;
             auto two_r = SubRect(*this);
@@ -63,7 +66,7 @@ namespace algoExpert::searching {
             two_r._topLeft.first = _topLeft.first + one_r._size.first;
             return {one_r, two_r};
         }
-        [[nodiscard]] two_rects_t createByY() const {
+        [[nodiscard]] two_rects_t divideInYaxis() const {
             auto one_r = SubRect(*this);
             one_r._size.second = _size.second / 2;
             auto two_r = SubRect(*this);
@@ -73,7 +76,7 @@ namespace algoExpert::searching {
         }
     };
 
-    bool search_helper(const SubRect sr, const int& target, const bool divideByY, vector<int>& r) {
+    bool search_helper(const SubRect& sr, const int& target, const bool divideInY, vector<int>& r) {
         if (r != no_result)          return true;
         if (!sr.may_contain(target)) return false;
         if (sr.is_one_cell()) {
@@ -85,19 +88,19 @@ namespace algoExpert::searching {
         }
 
         if (sr.is_one_row()) {
-            const auto two_sr = sr.createByX();
+            const auto& two_sr = sr.divideInXaxis();
             if (search_helper(two_sr.first, target, false, r)) return true;
             if (search_helper(two_sr.second, target, false, r)) return true;
         }
         else if (sr.is_one_column()) {
-            const auto two_sr = sr.createByY();
+            const auto& two_sr = sr.divideInYaxis();
             if (search_helper(two_sr.first, target, true, r)) return true;
             if (search_helper(two_sr.second, target, true, r)) return true;
         }
         else {
-            const auto two_sr = divideByY ? sr.createByY() : sr.createByX();
-            if (search_helper(two_sr.first, target, !divideByY, r)) return true;
-            if (search_helper(two_sr.second, target, !divideByY, r)) return true;
+            const auto& two_sr = divideInY ? sr.divideInYaxis() : sr.divideInXaxis();
+            if (search_helper(two_sr.first, target, !divideInY, r)) return true;
+            if (search_helper(two_sr.second, target, !divideInY, r)) return true;
         }
         return false;
     }
