@@ -30,7 +30,7 @@ Some notes:
 
 ### Current status of solved/total problems:
 
-*   102 Questions Completed out of 200
+*   103 Questions Completed out of 200
 *   By categories:
 
 <table>
@@ -164,7 +164,7 @@ Some notes:
                 <a href="AlgoExpert/Searching/">Searching</a>
             </td>
             <td>
-                2 / 9
+                3 / 9
             </td>
         </tr>
         <tr>

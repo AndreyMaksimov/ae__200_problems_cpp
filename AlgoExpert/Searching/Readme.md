@@ -66,7 +66,7 @@
                 :large_blue_circle:
             </td>
             <td>
-                <a href="Medium/some-dir/">Some Medium Problem</a>
+                <a href="Medium/search-in-sorted-matrix/">Search In Sorted Matrix</a>
             </td>
             <td>
                 :heavy_plus_sign:
