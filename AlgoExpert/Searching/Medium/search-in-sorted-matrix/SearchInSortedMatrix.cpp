@@ -7,8 +7,10 @@
 #include "SearchInSortedMatrix.h"
 
 // The idea is sequentially divide matrix recursively in Y and X directions.
-// Check on each step if a target is inside new rectangle (between top left & right bottom values)
-// Does it work with complexity O(log(M+N)) ? Because no guarantee that we half reducing amount of data on each step
+// Check on each step if a target is inside new rectangles (between top left & right bottom values)
+// Does it work with complexity O(log(M*N)) = log(M) + log(N) ? Because no guarantee that we half reducing
+// amount of data on each step.
+// However, in some cases - only one row or only one column it will be definitely log(N)
 
 namespace algoExpert::searching {
     using std::min;
