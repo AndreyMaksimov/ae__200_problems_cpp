@@ -4,9 +4,9 @@ import os
 
 ALGOEXPERT_QUESTIONS_URL = 'https://www.algoexpert.io/questions/'
 ALGOEXPERT_ROOT_DIR = 'AlgoExpert'
-CATEGORY = 'Searching'
-DIFFICULTY = 'Medium'
-PROBLEM_NAME = 'search-in-sorted-matrix'
+CATEGORY = 'Arrays'
+DIFFICULTY = 'Easy'
+PROBLEM_NAME = 'validate-subsequence'
 
 CMAKE_LISTS = 'CMakeLists.txt'
 DISCOVER_TESTS = '_discover_tests'
