@@ -1,3 +1,0 @@
-# AlgoExpert/Arrays/Medium/smallest-difference/CMakeLists.txt
-
-add_tests_for_problem(SmallestDifference)
