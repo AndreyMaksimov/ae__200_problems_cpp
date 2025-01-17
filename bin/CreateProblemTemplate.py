@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # bin/CreateProblemTemplate.py
 import os
 
