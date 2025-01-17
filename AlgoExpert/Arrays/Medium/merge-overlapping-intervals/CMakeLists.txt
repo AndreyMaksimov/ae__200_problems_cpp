@@ -1,0 +1,3 @@
+# AlgoExpert/Arrays/Medium/merge-overlapping-intervals/CMakeLists.txt
+
+add_tests_for_problem(MergeOverlappingIntervals MergeOverlappingIntervals_discover_tests)

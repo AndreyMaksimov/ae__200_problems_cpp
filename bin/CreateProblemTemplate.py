@@ -5,8 +5,8 @@ import os
 ALGOEXPERT_QUESTIONS_URL = 'https://www.algoexpert.io/questions/'
 ALGOEXPERT_ROOT_DIR = 'AlgoExpert'
 CATEGORY = 'Arrays'
-DIFFICULTY = 'Hard'
-PROBLEM_NAME = 'zigzag-traverse'
+DIFFICULTY = 'Medium'
+PROBLEM_NAME = 'zero-sum-subarray'
 
 CMAKE_LISTS = 'CMakeLists.txt'
 DISCOVER_TESTS = '_discover_tests'
