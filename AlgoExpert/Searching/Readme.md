@@ -91,10 +91,10 @@
                 <a href="Hard/some-dir/">Some Hard Problem</a>
             </td>
             <td>
-                :heavy_plus_sign:
+                :heavy_minus_sign:
             </td>
             <td>
-                :white_check_mark:
+                :heavy_minus_sign:
             </td>
         </tr>
         <tr>
@@ -108,10 +108,10 @@
                 <a href="Hard/some-dir/">Some Hard Problem</a>
             </td>
             <td>
-                :heavy_plus_sign:
+                :heavy_minus_sign:
             </td>
             <td>
-                :white_check_mark:
+                :heavy_minus_sign:
             </td>
         </tr>
         <tr>
@@ -125,10 +125,10 @@
                 <a href="Hard/some-dir/">Some Hard Problem</a>
             </td>
             <td>
-                :heavy_plus_sign:
+                :heavy_minus_sign:
             </td>
             <td>
-                :white_check_mark:
+                :heavy_minus_sign:
             </td>
         </tr>
         <tr>
@@ -142,10 +142,10 @@
                 <a href="Hard/some-dir/">Some Hard Problem</a>
             </td>
             <td>
-                :heavy_plus_sign:
+                :heavy_minus_sign:
             </td>
             <td>
-                :white_check_mark:
+                :heavy_minus_sign:
             </td>
         </tr>
         <tr>
@@ -164,10 +164,10 @@
                 <a href="VeryHard/some-dir/">Some Very Hard Problem</a>
             </td>
             <td>
-                :heavy_plus_sign:
+                :heavy_minus_sign:
             </td>
             <td>
-                :white_check_mark:
+                :heavy_minus_sign:
             </td>
         </tr>
         <tr>
@@ -181,10 +181,10 @@
                 <a href="VeryHard/some-dir/">Some Very Hard Problem</a>
             </td>
             <td>
-                :heavy_plus_sign:
+                :heavy_minus_sign:
             </td>
             <td>
-                :white_check_mark:
+                :heavy_minus_sign:
             </td>
         </tr>
     </tbody>
