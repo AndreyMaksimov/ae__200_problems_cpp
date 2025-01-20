@@ -19,7 +19,7 @@ Some notes:
 
     **Easy** - level
 
-    **NonConstructibleChange** - problem dir with a set of files with straightforward names (\*.cpp - solution, \_test.cpp - test cases, etc.)  
+    **non-constructible-change** - problem dir with a set of files with straightforward names (NonConstructibleChange.cpp - problem solution, NonConstructibleChange_test.cpp - test cases, etc.)  
 
         
     
