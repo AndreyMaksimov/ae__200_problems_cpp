@@ -1,4 +1,4 @@
-## "SomeCategory" problems
+## "Arrays" problems
 
 <table>
     <tbody>
@@ -27,7 +27,92 @@
                 :green_circle:
             </td>
             <td>
-                <a href="Easy/some-dir/">Some Easy Problem</a>
+                <a href="Easy/two-number-sum/">Two Number Sum</a>
+            </td>
+            <td>
+                :heavy_plus_sign:
+            </td>
+            <td>
+                :white_check_mark:
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:right;">
+                2
+            </td>
+            <td>
+                :green_circle:
+            </td>
+            <td>
+                <a href="Easy/validate-subsequence/">Validate Subsequence</a>
+            </td>
+            <td>
+                :heavy_plus_sign:
+            </td>
+            <td>
+                :white_check_mark:
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:right;">
+                3
+            </td>
+            <td>
+                :green_circle:
+            </td>
+            <td>
+                <a href="Easy/sorted-squared-array/">Sorted Squared Array</a>
+            </td>
+            <td>
+                :heavy_plus_sign:
+            </td>
+            <td>
+                :white_check_mark:
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:right;">
+                4
+            </td>
+            <td>
+                :green_circle:
+            </td>
+            <td>
+                <a href="Easy/tournament-winner/">Tournament Winner</a>
+            </td>
+            <td>
+                :heavy_plus_sign:
+            </td>
+            <td>
+                :white_check_mark:
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:right;">
+                5
+            </td>
+            <td>
+                :green_circle:
+            </td>
+            <td>
+                <a href="Easy/non-constructible-change/">Non Constructible Change</a>
+            </td>
+            <td>
+                :heavy_plus_sign:
+            </td>
+            <td>
+                :white_check_mark:
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:right;">
+                6
+            </td>
+            <td>
+                :green_circle:
+            </td>
+            <td>
+                <a href="Easy/transpose-matrix/">Transpose Matrix</a>
             </td>
             <td>
                 :heavy_plus_sign:
