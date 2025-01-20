@@ -1,5 +1,7 @@
 ## algoexpert-cpp
 
+#algorithms #c-c++ #google-test
+
 Solving [algoexpert](https://www.algoexpert.io/questions) problems in C++. [My certificate](https://certificate.algoexpert.io/AE-c8dba87ec3)
 
 Some notes:
@@ -17,9 +19,9 @@ Some notes:
 
     **Arrays** - category
 
-    **Easy** - level
+    **Easy** - difficulty level
 
-    **non-constructible-change** - problem dir with a set of files with straightforward names (NonConstructibleChange.cpp - problem solution, NonConstructibleChange_test.cpp - test cases, etc.)  
+    **non-constructible-change** - problem dir with a set of files with straightforward names (**NonConstructibleChange.cpp** - problem solution, **NonConstructibleChange_test.cpp** - test cases, etc.)  
 
         
     
