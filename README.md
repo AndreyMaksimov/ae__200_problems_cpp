@@ -51,7 +51,7 @@ Some notes:
                 1
             </td>
             <td>
-                Arrays
+                <a href="AlgoExpert/Arrays/">Arrays</a>
             </td>
             <td>
                 27 / 33
