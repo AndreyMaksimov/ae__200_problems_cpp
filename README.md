@@ -8,8 +8,8 @@ Some notes:
 
 *   The repo is structured like **Algoexpert** (**AE**) by problems categories
 
-    *   Categories (like “**Arrays**”, “**Heaps**”, “**Strings**”, etc.) are divided to difficulty levels (**Easy**, **Medium**, **Hard**, **Very Hard**)
-        *   And finally - problems themself for each level  
+    *   Categories (like “**Arrays**”, “**Heaps**”, “**Strings**”, etc.) are divided (by directories) to difficulty levels (**Easy**, **Medium**, **Hard**, **Very Hard**)
+        *   And finally - a list of problems subdirs under each level 
 
 *   Example:
 
@@ -32,7 +32,7 @@ Some notes:
 
 ### Current status of solved/total problems:
 
-*   103 Questions Completed out of 200
+*   103 Questions completed out of 200
 *   By categories:
 
 <table>
