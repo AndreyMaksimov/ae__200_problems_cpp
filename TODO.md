@@ -51,4 +51,5 @@
 
 *   #### Emplacement
 
-    *   sdsadsa
+    *   Use **emplace** instead of **push**, **push_back** ...
+    *   **map**: use **try_emplace**
