@@ -18,6 +18,8 @@
         cbegin, rbegin, crbegin, ...
         ```
         
+    *   Use global **advance(...)** instead of **+/-** ?
+        
   *   #### Structured binding
     
       *   Replace pair where it possibly  
