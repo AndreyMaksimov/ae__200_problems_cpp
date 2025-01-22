@@ -18,21 +18,35 @@
         cbegin, rbegin, crbegin, ...
         ```
         
-*   #### Structured binding
+  *   #### Structured binding
     
-    *   Replace pair where it possibly  
-        Use  
-        ```cpp
-        auto [some1, some2] = some\_fun(...);
-        ```
+      *   Replace pair where it possibly  
+          Use  
+          ```cpp
+          auto [val1, val2] = some_fun(...);
+          ```
         
-        instead of  
-        ```cpp
-        auto p = some\_fun(...);
-        auto some1 = p.first;
-        **`auto some2 = p.second;
-        ```
-        
+          instead of  
+          ```cpp
+          auto p = some_fun(...);
+          auto val1 = p.first;
+          auto val2 = p.second;
+          ```
+
+      *   Initializer in an **if** statement + structured binding + **insert_or_assign** . Example with **map**
+
+          ```cpp
+          map<string, int> scores;            // Create an empty std::map
+          //...
+          if (auto [iter, success] = scores.insert_or_assign("Graham"s, 66); success) {
+              cout << "Inserted a new element\n";
+          }
+          else {
+              auto [name, score] = *iter;     // Get the members of the element pair
+              cout << "Existing element with name " << name << " now has score " << score << endl;
+          }
+          ```
+
 *   #### Emplacement
 
     *   sdsadsa
