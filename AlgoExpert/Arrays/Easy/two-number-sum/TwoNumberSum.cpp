@@ -2,10 +2,6 @@
 //
 // #arrays
 // #easy
-// #std::vector
-// #std::count
-//
-
 
 #include <vector>
 #include <unordered_set>
@@ -15,16 +11,13 @@ namespace algoExpert::arrays {
 
     using std::vector, std::unordered_set;
 
+    // O(N) time / O(1) memory
     vector<int> twoNumberSum(const vector<int> array, const int targetSum) {
-        std::unordered_set<int> hash;
-        for (const auto i: array) {
-            if ( (i+i) == targetSum) continue; // skip same value
-            hash.insert(i);
-        }
-        for (const auto i: array) {
+        unordered_set<int> hash;
+        for (const auto& i: array) {
             const auto di = targetSum - i;
-            if (hash.find(di) == hash.end()) continue;
-            return {i, di};
+            if (hash.find(di) != hash.end()) return {i, di};
+            hash.insert(i);
         }
         return {};
     }
