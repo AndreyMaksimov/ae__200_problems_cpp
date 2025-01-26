@@ -1,4 +1,4 @@
-## "Arrays" problems
+## "Arrays" problems (27 / 33)
 
 <table>
     <tbody>
@@ -371,13 +371,132 @@
         </tr>
         <tr>
             <td style="text-align:right;">
-                3
+                21
             </td>
             <td>
                 :red_circle:
             </td>
             <td>
-                <a href="Hard/some-dir/">Some Hard Problem</a>
+                <a href="Hard/four-number-sum/">Four Number Sum</a>
+            </td>
+            <td>
+                :heavy_plus_sign:
+            </td>
+            <td>
+                :white_check_mark:
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:right;">
+                22
+            </td>
+            <td>
+                :red_circle:
+            </td>
+            <td>
+                <a href="Hard/subarray-sort/">Subarray Sort</a>
+            </td>
+            <td>
+                :heavy_plus_sign:
+            </td>
+            <td>
+                :white_check_mark:
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:right;">
+                23
+            </td>
+            <td>
+                :red_circle:
+            </td>
+            <td>
+                <a href="Hard/largest-range/">Largest Range</a>
+            </td>
+            <td>
+                :heavy_plus_sign:
+            </td>
+            <td>
+                :white_check_mark:
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:right;">
+                24
+            </td>
+            <td>
+                :red_circle:
+            </td>
+            <td>
+                <a href="Hard/min-rewards/">Min Rewards</a>
+            </td>
+            <td>
+                :heavy_plus_sign:
+            </td>
+            <td>
+                :white_check_mark:
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:right;">
+                25
+            </td>
+            <td>
+                :red_circle:
+            </td>
+            <td>
+                <a href="Hard/zigzag-traverse/">Zigzag Traverse</a>
+            </td>
+            <td>
+                :heavy_plus_sign:
+            </td>
+            <td>
+                :white_check_mark:
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:right;">
+                26
+            </td>
+            <td>
+                :red_circle:
+            </td>
+            <td>
+                <a href="Hard/longest-subarray-with-sum/">Longest Subarray With Sum</a>
+            </td>
+            <td>
+                :heavy_plus_sign:
+            </td>
+            <td>
+                :white_check_mark:
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:right;">
+                27
+            </td>
+            <td>
+                :red_circle:
+            </td>
+            <td>
+                <a href="Hard/knight-connection/">Knight Connection</a>
+            </td>
+            <td>
+                :heavy_plus_sign:
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:right;">
+                28
+            </td>
+            <td>
+                :red_circle:
+            </td>
+            <td>
+                <a href="Hard/count-squares/">Count Squares</a>
             </td>
             <td>
                 :heavy_plus_sign:
@@ -393,19 +512,87 @@
         </tr>
         <tr>
             <td style="text-align:right;">
-                4
+                29
             </td>
             <td>
                 :black_circle:
             </td>
             <td>
-                <a href="VeryHard/some-dir/">Some Very Hard Problem</a>
+                &nbsp;
             </td>
             <td>
-                :heavy_plus_sign:
+                &nbsp;
             </td>
             <td>
-                :white_check_mark:
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:right;">
+                30
+            </td>
+            <td>
+                :black_circle:
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:right;">
+                31
+            </td>
+            <td>
+                :black_circle:
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:right;">
+                32
+            </td>
+            <td>
+                :black_circle:
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:right;">
+                33
+            </td>
+            <td>
+                :black_circle:
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
             </td>
         </tr>
     </tbody>
