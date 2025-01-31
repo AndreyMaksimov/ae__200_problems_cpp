@@ -86,7 +86,7 @@ Some notes:
                 4
             </td>
             <td>
-                Dynamic Programming
+                <a href="AlgoExpert/DynamicProgramming/">Dynamic Programming</a>
             </td>
             <td>
                 13 / 21
