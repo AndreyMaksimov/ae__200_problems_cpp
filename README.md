@@ -64,7 +64,7 @@ Some notes:
                 2
             </td>
             <td>
-                Binary Search Trees
+                <a href="AlgoExpert/BinarySearchTrees/">Binary Search Trees</a>
             </td>
             <td>
                 9 / 12
