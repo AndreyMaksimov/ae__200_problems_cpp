@@ -6,3 +6,6 @@
 
 ### Optimal
    <img src="img/Optimal.jpg" width="250"/>
+
+### AlgoExpert solution(s)
+   <img src="img/AE.jpg" width="250"/>
