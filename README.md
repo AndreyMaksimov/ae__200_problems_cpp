@@ -97,7 +97,7 @@ Some notes:
                 5
             </td>
             <td>
-                Famous Algorithms
+                <a href="AlgoExpert/FamousAlgorithms/">Famous Algorithms</a>
             </td>
             <td>
                 1 / 9
