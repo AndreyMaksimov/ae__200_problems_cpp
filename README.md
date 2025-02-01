@@ -140,8 +140,8 @@ Some notes:
             <td style="text-align:right;">
                 9
             </td>
-            <td>
-                Linked Lists
+            <td>                
+                <a href="AlgoExpert/LinkedLists/">Linked Lists</a>
             </td>
             <td>
                 11 / 15
