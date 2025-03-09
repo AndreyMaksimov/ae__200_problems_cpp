@@ -7,5 +7,5 @@
 ### Optimal
    <img src="img/Optimal.jpg" width="250"/>
 
-### AlgoExpert solution
+### AlgoExpert solution(s)
    <img src="img/AE.jpg" width="250"/>

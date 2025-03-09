@@ -152,7 +152,7 @@ Some notes:
                 10
             </td>
             <td>
-                Recursion
+                <a href="AlgoExpert/Recursion/">Recursion</a>
             </td>
             <td>
                 11 / 15
