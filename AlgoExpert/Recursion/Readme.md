@@ -176,7 +176,7 @@
                 <a href="Hard/lowest-common-manager/">Lowest Common Manager</a>
             </td>
             <td>
-                :heavy_plus_sign:
+                &nbsp;
             </td>
             <td>
                 :white_check_mark:
