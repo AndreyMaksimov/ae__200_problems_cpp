@@ -46,6 +46,7 @@ namespace algoExpert::recursion {
         auto it_digit = phoneNumber.begin();
         auto it_end = phoneNumber.end();
         phoneNumber_helper(it_digit, it_end, result);
+        std::sort(result.begin(), result.end());  // to satisfy Test cases
         return result;
     }
 }
