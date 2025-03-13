@@ -37,7 +37,7 @@ function(add_tests_for_problem problem_name discover_test)
         )
     endif()
 
-    if (${discover_test} OR ${Discover_All_Tests})
+    if ((${discover_test}) OR (${Discover_All_Tests}))
         message ("===== add discover tests: " ${problem_test_exe})
         gtest_discover_tests(${problem_test_exe})
     endif()
