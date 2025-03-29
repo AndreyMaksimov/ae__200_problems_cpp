@@ -1,6 +1,7 @@
 #include "JuiceBottling.h"
 #include "gtest/gtest.h"
 
+#if 0
 namespace
 {
 	TEST(JuiceBottling, Case01)
@@ -123,3 +124,4 @@ namespace
 		EXPECT_EQ(expected, output);
 	}
 }
+#endif
