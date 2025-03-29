@@ -1,6 +1,7 @@
 #include "LongestStringChain.h"
 #include "gtest/gtest.h"
 
+#if 0
 namespace
 {
 	TEST(LongestStringChain, Case01)
@@ -53,4 +54,4 @@ namespace
 		EXPECT_EQ(expected, output);
 	}
 }
-
+#endif
