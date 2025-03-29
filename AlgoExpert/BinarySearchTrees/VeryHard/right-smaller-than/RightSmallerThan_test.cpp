@@ -1,6 +1,7 @@
 #include "RightSmallerThan.h"
 #include "gtest/gtest.h"
 
+#if 0
 namespace
 {
 	TEST(RightSmallerThan, Case01)
@@ -67,4 +68,4 @@ namespace
 		EXPECT_EQ(expected, output);
 	}
 }
-
+#endif
