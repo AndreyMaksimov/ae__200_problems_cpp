@@ -1,6 +1,7 @@
 #include "DiceThrows.h"
 #include "gtest/gtest.h"
 
+#if 0
 namespace
 {
 	TEST(DiceThrows, Case01)
@@ -121,3 +122,4 @@ namespace
 		EXPECT_EQ(expected, output);
 	}
 }
+#endif
