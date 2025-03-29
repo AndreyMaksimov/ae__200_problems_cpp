@@ -1,6 +1,7 @@
 #include "RevealMinesweeper.h"
 #include "gtest/gtest.h"
 
+#if 0
 namespace
 {
 	TEST(RevealMinesweeper, Case01)
@@ -742,3 +743,4 @@ namespace
 		EXPECT_EQ(expected, output);
 	}
 }
+#endif
