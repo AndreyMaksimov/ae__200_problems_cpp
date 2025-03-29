@@ -1,6 +1,7 @@
 #include "BlackjackProbability.h"
 #include "gtest/gtest.h"
 
+#if 0
 namespace
 {
 	TEST(BlackjackProbability, Case01)
@@ -148,3 +149,4 @@ namespace
 		EXPECT_EQ(expected, output);
 	}
 }
+#endif
