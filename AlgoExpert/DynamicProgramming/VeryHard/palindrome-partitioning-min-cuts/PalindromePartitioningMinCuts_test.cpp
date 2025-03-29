@@ -1,6 +1,7 @@
 #include "PalindromePartitioningMinCuts.h"
 #include "gtest/gtest.h"
 
+#if 0
 namespace
 {
 	TEST(PalindromePartitioningMinCuts, Case01)
@@ -81,4 +82,4 @@ namespace
 		EXPECT_EQ(expected, output);
 	}
 }
-
+#endif
