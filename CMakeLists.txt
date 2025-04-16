@@ -13,6 +13,8 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(googletest)
 set(googletest_include ${googletest_SOURCE_DIR}/googletest/include)
 
+option(Discover_All_Tests "Switch ON/OFF run All tests" OFF)
+
 set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake/")
 include(AeHelpers)
 
