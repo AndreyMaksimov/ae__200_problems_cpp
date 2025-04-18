@@ -1,8 +1,9 @@
 ## algoexpert-cpp
 
-#algorithms #c-c++ #google-test
+#algorithms #c-c++ #google-test #github-actions
 
-Solving [algoexpert](https://www.algoexpert.io/questions) problems in C++. [My certificate](https://certificate.algoexpert.io/AE-c8dba87ec3)
+*   Solving [algoexpert](https://www.algoexpert.io/questions) problems in C++. [My certificate](https://certificate.algoexpert.io/AE-c8dba87ec3)
+*   Configured github-action: [Build and run all tests](https://github.com/AndreyMaksimov/ae__200_problems_cpp/actions/workflows/Build-run-Tests.yaml)
 
 Some notes:
 
